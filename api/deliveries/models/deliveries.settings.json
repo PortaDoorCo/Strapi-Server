@@ -28,6 +28,12 @@
     },
     "order": {
       "model": "orders"
+    },
+    "company": {
+      "type": "string"
+    },
+    "address": {
+      "type": "text"
     }
   }
 }
