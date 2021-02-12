@@ -60,12 +60,8 @@
       "configurable": false
     },
     "deliveries": {
-      "collection": "deliveries",
-      "via": "users_permissions_user"
-    },
-    "orders": {
       "via": "users_permissions_user",
-      "collection": "orders"
+      "collection": "deliveries"
     },
     "sale": {
       "model": "sale",
@@ -132,6 +128,10 @@
     "box_sides": {
       "type": "integer",
       "default": 1
+    },
+    "orders": {
+      "via": "user",
+      "collection": "orders"
     }
   }
 }

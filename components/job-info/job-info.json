@@ -10,7 +10,8 @@
       "type": "string"
     },
     "poNum": {
-      "type": "string"
+      "type": "string",
+      "default": " "
     },
     "Zip": {
       "type": "string"

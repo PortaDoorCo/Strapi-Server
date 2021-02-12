@@ -70,7 +70,7 @@
     "balance_history": {
       "type": "json"
     },
-    "users_permissions_user": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "orders"
@@ -83,13 +83,16 @@
       "type": "json"
     },
     "Taxable": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "Sample": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "Rush": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "Conversation_Notes": {
       "type": "json"
@@ -108,6 +111,9 @@
       "type": "component",
       "repeatable": true,
       "component": "part-list.part-list"
+    },
+    "job_info": {
+      "type": "json"
     }
   }
 }
