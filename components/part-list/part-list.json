@@ -12,7 +12,7 @@
     "cope_design": {
       "model": "cope-designs"
     },
-    "applied_profiles": {
+    "applied_profile": {
       "model": "applied-profiles"
     },
     "profile": {
