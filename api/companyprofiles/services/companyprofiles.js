@@ -38,4 +38,7 @@ module.exports = {
     const results = await strapi.query('companyprofiles').find(params, populate);
     return _.first(results) || null;
     },
+    findOne(params, populate) {
+        return strapi.query('companyprofiles').findOne(params, populate);
+      },
 };
