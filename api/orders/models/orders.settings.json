@@ -104,8 +104,8 @@
       "type": "float"
     },
     "sale": {
-      "model": "sale",
-      "via": "orders"
+      "via": "orders",
+      "model": "sale"
     },
     "part_list": {
       "type": "component",

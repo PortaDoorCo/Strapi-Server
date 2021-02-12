@@ -21,7 +21,7 @@
       "model": "companyprofiles",
       "via": "delivery"
     },
-    "users_permissions_user": {
+    "user": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "deliveries"

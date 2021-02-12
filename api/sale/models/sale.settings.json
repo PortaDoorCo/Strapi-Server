@@ -15,17 +15,17 @@
       "type": "string"
     },
     "orders": {
-      "via": "sale",
-      "collection": "orders"
+      "collection": "orders",
+      "via": "sale"
     },
     "companyprofiles": {
       "collection": "companyprofiles",
       "via": "sale"
     },
-    "users_permissions_user": {
-      "via": "sale",
+    "user": {
       "plugin": "users-permissions",
-      "model": "user"
+      "model": "user",
+      "via": "sale"
     }
   }
 }

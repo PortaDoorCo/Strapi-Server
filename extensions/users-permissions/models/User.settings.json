@@ -59,14 +59,6 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "deliveries": {
-      "via": "users_permissions_user",
-      "collection": "deliveries"
-    },
-    "sale": {
-      "model": "sale",
-      "via": "users_permissions_user"
-    },
     "FirstName": {
       "type": "string"
     },
@@ -132,6 +124,14 @@
     "orders": {
       "via": "user",
       "collection": "orders"
+    },
+    "sale": {
+      "via": "user",
+      "model": "sale"
+    },
+    "deliveries": {
+      "via": "user",
+      "collection": "deliveries"
     }
   }
 }
