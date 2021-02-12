@@ -98,10 +98,6 @@
     "Customer_Notes": {
       "type": "json"
     },
-    "delivery": {
-      "via": "companyprofile",
-      "model": "deliveries"
-    },
     "orders": {
       "via": "companyprofile",
       "collection": "orders"
@@ -109,6 +105,10 @@
     "sale": {
       "via": "companyprofiles",
       "model": "sale"
+    },
+    "delivery": {
+      "via": "companyprofile",
+      "model": "deliveries"
     }
   }
 }

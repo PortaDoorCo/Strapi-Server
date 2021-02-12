@@ -5,4 +5,8 @@
  * to customize this service
  */
 
-module.exports = {};
+module.exports = {
+    find(params, populate) {
+        return strapi.query('deliveries').find(params, populate);
+      },
+};
