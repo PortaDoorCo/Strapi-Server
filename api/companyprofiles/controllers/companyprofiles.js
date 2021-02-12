@@ -66,4 +66,10 @@ module.exports = {
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.companyprofiles }));
   },
+  async findOne(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services.companyprofiles.findOne({ id });
+    return sanitizeEntity(entity, { model: strapi.models.companyprofiles });
+  },
 };
