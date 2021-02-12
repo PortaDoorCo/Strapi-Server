@@ -21,7 +21,8 @@
       "type": "integer"
     },
     "total": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "subTotals": {
       "type": "json"
@@ -39,7 +40,8 @@
       "type": "string"
     },
     "tax": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "files": {
       "collection": "file",
@@ -62,10 +64,12 @@
       "type": "boolean"
     },
     "balance_paid": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "balance_due": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "balance_history": {
       "type": "json"
@@ -101,11 +105,12 @@
       "type": "json"
     },
     "discount": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "sale": {
-      "via": "orders",
-      "model": "sale"
+      "model": "sale",
+      "via": "orders"
     },
     "part_list": {
       "type": "component",
@@ -116,8 +121,8 @@
       "type": "json"
     },
     "delivery": {
-      "via": "order",
-      "model": "deliveries"
+      "model": "deliveries",
+      "via": "order"
     }
   }
 }
