@@ -172,4 +172,10 @@ module.exports = {
     strapi.emitToAllUsers("order_deleted", entity);
     return sanitizeEntity(entity, { model: strapi.models.orders });
   },
+  async findOne(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services.orders.findOne({ id });
+    return sanitizeEntity(entity, { model: strapi.models.orders });
+  },
 };

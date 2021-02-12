@@ -54,4 +54,7 @@ module.exports = {
     delete(params) {
         return strapi.query('orders').delete(params);
     },
+    findOne(params, populate) {
+        return strapi.query('orders').findOne(params, populate);
+      },
 };
