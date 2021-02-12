@@ -15,8 +15,8 @@
       "type": "string"
     },
     "orders": {
-      "collection": "orders",
-      "via": "sale"
+      "via": "sale",
+      "collection": "orders"
     },
     "companyprofiles": {
       "collection": "companyprofiles",
