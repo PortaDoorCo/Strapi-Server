@@ -27,7 +27,8 @@
       "via": "deliveries"
     },
     "order": {
-      "model": "orders"
+      "model": "orders",
+      "via": "delivery"
     },
     "company": {
       "type": "string"

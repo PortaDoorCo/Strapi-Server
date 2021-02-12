@@ -114,6 +114,10 @@
     },
     "job_info": {
       "type": "json"
+    },
+    "delivery": {
+      "via": "order",
+      "model": "deliveries"
     }
   }
 }
