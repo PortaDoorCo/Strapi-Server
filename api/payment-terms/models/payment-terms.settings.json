@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_terms",
+  "info": {
+    "name": "payment-terms"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    }
+  }
+}

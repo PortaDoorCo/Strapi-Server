@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "name": "sale",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "orders": {
+      "via": "sale",
+      "collection": "orders"
+    },
+    "companyprofiles": {
+      "collection": "companyprofiles",
+      "via": "sale"
+    },
+    "users_permissions_user": {
+      "via": "sale",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

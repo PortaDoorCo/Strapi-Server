@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/woodtypes",
+      "handler": "woodtypes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/woodtypes/count",
+      "handler": "woodtypes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/woodtypes/:id",
+      "handler": "woodtypes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/woodtypes",
+      "handler": "woodtypes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/woodtypes/:id",
+      "handler": "woodtypes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/woodtypes/:id",
+      "handler": "woodtypes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

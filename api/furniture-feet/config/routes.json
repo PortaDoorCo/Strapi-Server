@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/furniture-feets",
+      "handler": "furniture-feet.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/furniture-feets/count",
+      "handler": "furniture-feet.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/furniture-feets/:id",
+      "handler": "furniture-feet.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/furniture-feets",
+      "handler": "furniture-feet.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/furniture-feets/:id",
+      "handler": "furniture-feet.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/furniture-feets/:id",
+      "handler": "furniture-feet.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "products_apis",
+  "info": {
+    "name": "products-api",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {}
+}

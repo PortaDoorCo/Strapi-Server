@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-woodtypes",
+      "handler": "box-woodtypes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-woodtypes/count",
+      "handler": "box-woodtypes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-woodtypes/:id",
+      "handler": "box-woodtypes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-woodtypes",
+      "handler": "box-woodtypes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-woodtypes/:id",
+      "handler": "box-woodtypes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-woodtypes/:id",
+      "handler": "box-woodtypes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

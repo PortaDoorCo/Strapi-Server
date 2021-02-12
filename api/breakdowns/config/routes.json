@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/breakdowns",
+      "handler": "breakdowns.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/breakdowns/count",
+      "handler": "breakdowns.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/breakdowns/:id",
+      "handler": "breakdowns.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/breakdowns",
+      "handler": "breakdowns.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/breakdowns/:id",
+      "handler": "breakdowns.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/breakdowns/:id",
+      "handler": "breakdowns.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

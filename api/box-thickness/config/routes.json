@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-thicknesses",
+      "handler": "box-thickness.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-thicknesses/count",
+      "handler": "box-thickness.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-thicknesses/:id",
+      "handler": "box-thickness.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-thicknesses",
+      "handler": "box-thickness.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-thicknesses/:id",
+      "handler": "box-thickness.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-thicknesses/:id",
+      "handler": "box-thickness.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

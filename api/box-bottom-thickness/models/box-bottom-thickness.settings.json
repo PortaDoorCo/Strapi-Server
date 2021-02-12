@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "box_bottom_thicknesses",
+  "info": {
+    "name": "box_bottom_thickness"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    }
+  }
+}

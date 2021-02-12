@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mt-df-designs",
+      "handler": "mt-df-designs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mt-df-designs/count",
+      "handler": "mt-df-designs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mt-df-designs/:id",
+      "handler": "mt-df-designs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mt-df-designs",
+      "handler": "mt-df-designs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mt-df-designs/:id",
+      "handler": "mt-df-designs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mt-df-designs/:id",
+      "handler": "mt-df-designs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

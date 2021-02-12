@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "products",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "sku": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "discount": {
+      "type": "float"
+    },
+    "new": {
+      "type": "boolean"
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "ratingCount": {
+      "type": "integer"
+    },
+    "saleCount": {
+      "type": "integer"
+    },
+    "variation": {
+      "type": "json"
+    },
+    "thumbImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "fullDescription": {
+      "type": "text"
+    },
+    "category": {
+      "type": "json"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "tag": {
+      "type": "json"
+    },
+    "part_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "part-list.part-list"
+    }
+  }
+}

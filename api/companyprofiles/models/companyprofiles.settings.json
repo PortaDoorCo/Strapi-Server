@@ -1,0 +1,114 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companyprofiles",
+  "info": {
+    "name": "companyprofiles",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Company": {
+      "type": "string"
+    },
+    "Contact": {
+      "type": "string"
+    },
+    "Address1": {
+      "type": "string"
+    },
+    "Address2": {
+      "type": "string"
+    },
+    "City": {
+      "type": "string"
+    },
+    "State": {
+      "type": "string"
+    },
+    "Phone1": {
+      "type": "string"
+    },
+    "Phone2": {
+      "type": "string"
+    },
+    "Fax": {
+      "type": "string"
+    },
+    "Ship_To": {
+      "type": "string"
+    },
+    "Shipping_Address1": {
+      "type": "string"
+    },
+    "Shipping_Address2": {
+      "type": "string"
+    },
+    "Shipping_City": {
+      "type": "string"
+    },
+    "Shipping_State": {
+      "type": "string"
+    },
+    "Shipping_Zip": {
+      "type": "string"
+    },
+    "Shipping_Phone": {
+      "type": "string"
+    },
+    "Ship_Via": {
+      "type": "string"
+    },
+    "PaymentType": {
+      "type": "string"
+    },
+    "SalesPerson": {
+      "type": "string"
+    },
+    "Discount": {
+      "type": "float"
+    },
+    "TaxRate": {
+      "type": "float"
+    },
+    "EMAIL": {
+      "type": "email"
+    },
+    "Zip": {
+      "type": "string"
+    },
+    "Taxable": {
+      "type": "boolean"
+    },
+    "CUSTNO": {
+      "type": "integer"
+    },
+    "PMT_TERMS": {
+      "type": "string"
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "PaymentMethod": {
+      "type": "string"
+    },
+    "Customer_Notes": {
+      "type": "json"
+    },
+    "delivery": {
+      "via": "companyprofile",
+      "model": "deliveries"
+    },
+    "orders": {
+      "via": "companyprofile",
+      "collection": "orders"
+    },
+    "sale": {
+      "via": "companyprofiles",
+      "model": "sale"
+    }
+  }
+}

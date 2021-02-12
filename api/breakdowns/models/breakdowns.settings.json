@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "breakdowns",
+  "info": {
+    "name": "breakdowns"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "leftStile_width": {
+      "type": "text"
+    },
+    "rightStile_width": {
+      "type": "text"
+    },
+    "topRail_width": {
+      "type": "text"
+    },
+    "bottomRail_width": {
+      "type": "text"
+    },
+    "vertical_mid_rail_width": {
+      "type": "text"
+    },
+    "horizontal_mid_rail_width": {
+      "type": "string"
+    },
+    "panel_width": {
+      "type": "text"
+    },
+    "panel_height": {
+      "type": "text"
+    },
+    "leftStile_height": {
+      "type": "text"
+    },
+    "rightStile_height": {
+      "type": "text"
+    },
+    "topRail_height": {
+      "type": "text"
+    },
+    "bottomRail_height": {
+      "type": "text"
+    },
+    "vertical_mid_rail_height": {
+      "type": "text"
+    },
+    "horizontal_mid_rail_height": {
+      "type": "text"
+    },
+    "Item": {
+      "type": "integer"
+    }
+  }
+}

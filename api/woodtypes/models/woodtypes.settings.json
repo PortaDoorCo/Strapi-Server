@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "woodtypes",
+  "info": {
+    "name": "woodtypes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "STANDARD_GRADE": {
+      "type": "decimal"
+    },
+    "STANDARD_GRADE_THICK": {
+      "type": "decimal"
+    },
+    "WEIGHT": {
+      "type": "float"
+    },
+    "WEIGHT_THICK": {
+      "type": "float"
+    },
+    "one_piece": {
+      "type": "boolean"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

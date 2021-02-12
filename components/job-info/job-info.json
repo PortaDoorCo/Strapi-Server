@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_job_info_job_infos",
+  "info": {
+    "name": "job_info",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "jobName": {
+      "type": "string"
+    },
+    "poNum": {
+      "type": "string"
+    },
+    "Zip": {
+      "type": "string"
+    },
+    "DueDate": {
+      "type": "datetime"
+    },
+    "City": {
+      "type": "string"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "State": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "Address1": {
+      "type": "string"
+    },
+    "Address2": {
+      "type": "string"
+    },
+    "companyprofile": {
+      "model": "companyprofiles"
+    }
+  }
+}

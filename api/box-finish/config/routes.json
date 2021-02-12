@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-finishes",
+      "handler": "box-finish.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-finishes/count",
+      "handler": "box-finish.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-finishes/:id",
+      "handler": "box-finish.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-finishes",
+      "handler": "box-finish.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-finishes/:id",
+      "handler": "box-finish.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-finishes/:id",
+      "handler": "box-finish.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

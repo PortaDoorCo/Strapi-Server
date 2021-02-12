@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cope_df_designs",
+  "info": {
+    "name": "cope_df_designs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "TOP_RAIL_ADD": {
+      "type": "float"
+    },
+    "BTM_RAIL_ADD": {
+      "type": "float"
+    },
+    "one_piece": {
+      "type": "boolean"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "NAME": {
+      "type": "string"
+    }
+  }
+}

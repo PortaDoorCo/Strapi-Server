@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mouldings_lengths",
+  "info": {
+    "name": "mouldings_lengths"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/moulding-materials",
+      "handler": "moulding-material.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moulding-materials/count",
+      "handler": "moulding-material.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/moulding-materials/:id",
+      "handler": "moulding-material.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/moulding-materials",
+      "handler": "moulding-material.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/moulding-materials/:id",
+      "handler": "moulding-material.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/moulding-materials/:id",
+      "handler": "moulding-material.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

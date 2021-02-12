@@ -1,0 +1,84 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/products-api",
+      "handler": "products-api.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/products-api/count",
+      "handler": "products-api.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/products-api/:id",
+      "handler": "products-api.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/products-api/get/:id",
+      "handler": "products-api.getProducts",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/products-api/get/:product/:id",
+      "handler": "products-api.getSingleProduct",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/products-api",
+      "handler": "products-api.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/products-api/post/:id",
+      "handler": "products-api.addProduct",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/products-api/update/:product/:id",
+      "handler": "products-api.updateProduct",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/products-api/:id",
+      "handler": "products-api.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/products-api/delete/:product/:id",
+      "handler": "products-api.deleteProduct",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

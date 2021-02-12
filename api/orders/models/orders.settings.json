@@ -1,0 +1,113 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "linePrice": {
+      "type": "json"
+    },
+    "orderType": {
+      "type": "string"
+    },
+    "orderNum": {
+      "type": "integer"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "subTotals": {
+      "type": "json"
+    },
+    "Date": {
+      "type": "date"
+    },
+    "itemPrice": {
+      "type": "json"
+    },
+    "qty": {
+      "type": "json"
+    },
+    "status": {
+      "type": "string"
+    },
+    "tax": {
+      "type": "float"
+    },
+    "files": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "tracking": {
+      "type": "json"
+    },
+    "dueDate": {
+      "type": "datetime"
+    },
+    "late": {
+      "type": "boolean"
+    },
+    "balance_paid": {
+      "type": "decimal"
+    },
+    "balance_due": {
+      "type": "decimal"
+    },
+    "balance_history": {
+      "type": "json"
+    },
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "orders"
+    },
+    "companyprofile": {
+      "model": "companyprofiles",
+      "via": "orders"
+    },
+    "misc_items": {
+      "type": "json"
+    },
+    "Taxable": {
+      "type": "boolean"
+    },
+    "Sample": {
+      "type": "boolean"
+    },
+    "Rush": {
+      "type": "boolean"
+    },
+    "Conversation_Notes": {
+      "type": "json"
+    },
+    "mouldings": {
+      "type": "json"
+    },
+    "discount": {
+      "type": "float"
+    },
+    "sale": {
+      "model": "sale",
+      "via": "orders"
+    },
+    "part_list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "part-list.part-list"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "miter_df_designs",
+  "info": {
+    "name": "miter_DF_designs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "PROFILE_WIDTH": {
+      "type": "float"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "DF_Reduction": {
+      "type": "float"
+    },
+    "INSET": {
+      "type": "float"
+    }
+  }
+}

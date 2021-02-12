@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "misc_items",
+  "info": {
+    "name": "misc_items"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "decimal"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "count_items": {
+      "type": "boolean"
+    },
+    "categories": {
+      "collection": "category",
+      "via": "misc_items",
+      "dominant": true
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "edge_slabs",
+  "info": {
+    "name": "edge_slabs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "STILE_ADD": {
+      "type": "float"
+    },
+    "RAIL_ADD": {
+      "type": "float"
+    },
+    "LIP_FACTOR": {
+      "type": "float"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

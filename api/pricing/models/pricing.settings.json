@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pricings",
+  "info": {
+    "name": "pricing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "door_pricing": {
+      "type": "text"
+    },
+    "face_frame_pricing": {
+      "type": "text"
+    },
+    "drawer_box_pricing": {
+      "type": "text"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "df_pricing": {
+      "type": "text"
+    }
+  }
+}

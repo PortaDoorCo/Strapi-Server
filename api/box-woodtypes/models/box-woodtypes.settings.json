@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "box_woodtypes",
+  "info": {
+    "name": "box_woodtypes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "STANDARD_GRADE": {
+      "type": "decimal"
+    },
+    "WEIGHT": {
+      "type": "float"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

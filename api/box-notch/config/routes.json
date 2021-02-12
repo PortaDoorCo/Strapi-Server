@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-notches",
+      "handler": "box-notch.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-notches/count",
+      "handler": "box-notch.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-notches/:id",
+      "handler": "box-notch.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-notches",
+      "handler": "box-notch.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-notches/:id",
+      "handler": "box-notch.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-notches/:id",
+      "handler": "box-notch.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/face-frame-designs",
+      "handler": "face-frame-designs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/face-frame-designs/count",
+      "handler": "face-frame-designs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/face-frame-designs/:id",
+      "handler": "face-frame-designs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/face-frame-designs",
+      "handler": "face-frame-designs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/face-frame-designs/:id",
+      "handler": "face-frame-designs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/face-frame-designs/:id",
+      "handler": "face-frame-designs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

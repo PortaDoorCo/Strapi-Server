@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "box_thicknesses",
+  "info": {
+    "name": "box_thickness"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "SIDE_DEDUCTION": {
+      "type": "float"
+    },
+    "BOTTOM_WIDTH_REDUCTION": {
+      "type": "float"
+    },
+    "BOTTOM_LENGTH_DEDUCTION": {
+      "type": "float"
+    },
+    "WEIGHT": {
+      "type": "float"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

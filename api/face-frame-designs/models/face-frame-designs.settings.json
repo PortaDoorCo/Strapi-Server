@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "face_frame_designs",
+  "info": {
+    "name": "face_frame_designs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "opening_cost": {
+      "type": "decimal"
+    },
+    "opening_5_4_cost": {
+      "type": "decimal"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

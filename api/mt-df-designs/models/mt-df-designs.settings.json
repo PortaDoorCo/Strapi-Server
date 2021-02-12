@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mt_df_designs",
+  "info": {
+    "name": "MT_DF_designs"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "RAIL_ADD": {
+      "type": "float"
+    },
+    "RAIL_FACTOR": {
+      "type": "float"
+    },
+    "MINIMUM_STILE_WIDTH": {
+      "type": "float"
+    },
+    "MID_RAIL_MINIMUMS": {
+      "type": "float"
+    },
+    "INSET": {
+      "type": "float"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "DF_Reduction": {
+      "type": "float"
+    }
+  }
+}

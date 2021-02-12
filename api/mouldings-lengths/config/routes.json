@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mouldings-lengths",
+      "handler": "mouldings-lengths.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mouldings-lengths/count",
+      "handler": "mouldings-lengths.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mouldings-lengths/:id",
+      "handler": "mouldings-lengths.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mouldings-lengths",
+      "handler": "mouldings-lengths.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mouldings-lengths/:id",
+      "handler": "mouldings-lengths.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mouldings-lengths/:id",
+      "handler": "mouldings-lengths.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

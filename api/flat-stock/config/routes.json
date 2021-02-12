@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/flat-stocks",
+      "handler": "flat-stock.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/flat-stocks/count",
+      "handler": "flat-stock.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/flat-stocks/:id",
+      "handler": "flat-stock.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/flat-stocks",
+      "handler": "flat-stock.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/flat-stocks/:id",
+      "handler": "flat-stock.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/flat-stocks/:id",
+      "handler": "flat-stock.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

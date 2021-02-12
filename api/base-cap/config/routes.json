@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/base-caps",
+      "handler": "base-cap.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/base-caps/count",
+      "handler": "base-cap.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/base-caps/:id",
+      "handler": "base-cap.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/base-caps",
+      "handler": "base-cap.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/base-caps/:id",
+      "handler": "base-cap.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/base-caps/:id",
+      "handler": "base-cap.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

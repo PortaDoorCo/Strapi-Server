@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/applied-profiles",
+      "handler": "applied-profiles.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/applied-profiles/count",
+      "handler": "applied-profiles.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/applied-profiles/:id",
+      "handler": "applied-profiles.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/applied-profiles",
+      "handler": "applied-profiles.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/applied-profiles/:id",
+      "handler": "applied-profiles.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/applied-profiles/:id",
+      "handler": "applied-profiles.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "face_frame_top_rails",
+  "info": {
+    "name": "face_frame_top_rail"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

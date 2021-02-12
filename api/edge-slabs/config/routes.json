@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/edge-slabs",
+      "handler": "edge-slabs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/edge-slabs/count",
+      "handler": "edge-slabs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/edge-slabs/:id",
+      "handler": "edge-slabs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/edge-slabs",
+      "handler": "edge-slabs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/edge-slabs/:id",
+      "handler": "edge-slabs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/edge-slabs/:id",
+      "handler": "edge-slabs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

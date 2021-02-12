@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-assemblies",
+      "handler": "box-assembly.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-assemblies/count",
+      "handler": "box-assembly.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-assemblies/:id",
+      "handler": "box-assembly.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-assemblies",
+      "handler": "box-assembly.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-assemblies/:id",
+      "handler": "box-assembly.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-assemblies/:id",
+      "handler": "box-assembly.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

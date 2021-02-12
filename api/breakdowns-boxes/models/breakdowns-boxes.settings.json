@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "breakdowns_boxes",
+  "info": {
+    "name": "breakdowns-boxes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "bottoms_width": {
+      "type": "text"
+    },
+    "bottoms_depth": {
+      "type": "text"
+    },
+    "fronts_height": {
+      "type": "text"
+    },
+    "fronts_width": {
+      "type": "text"
+    },
+    "fronts_thickness": {
+      "type": "text"
+    },
+    "sides_height": {
+      "type": "text"
+    },
+    "sides_depth": {
+      "type": "text"
+    },
+    "sides_thickness": {
+      "type": "text"
+    },
+    "linear_ft": {
+      "type": "text"
+    },
+    "linear_IN": {
+      "type": "text"
+    },
+    "SQFT": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/box-scoops",
+      "handler": "box-scoop.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-scoops/count",
+      "handler": "box-scoop.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/box-scoops/:id",
+      "handler": "box-scoop.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/box-scoops",
+      "handler": "box-scoop.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/box-scoops/:id",
+      "handler": "box-scoop.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/box-scoops/:id",
+      "handler": "box-scoop.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

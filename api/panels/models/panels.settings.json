@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "panels",
+  "info": {
+    "name": "panels"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Item": {
+      "type": "integer"
+    },
+    "NAME": {
+      "type": "string"
+    },
+    "PANEL_FACTOR": {
+      "type": "float"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "one_piece": {
+      "type": "boolean"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Flat": {
+      "type": "boolean"
+    },
+    "Thickness": {
+      "type": "float"
+    }
+  }
+}

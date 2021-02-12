@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/crown-mouldings",
+      "handler": "crown-mouldings.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/crown-mouldings/count",
+      "handler": "crown-mouldings.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/crown-mouldings/:id",
+      "handler": "crown-mouldings.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/crown-mouldings",
+      "handler": "crown-mouldings.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/crown-mouldings/:id",
+      "handler": "crown-mouldings.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/crown-mouldings/:id",
+      "handler": "crown-mouldings.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

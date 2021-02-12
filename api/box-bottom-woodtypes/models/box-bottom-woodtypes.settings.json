@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "box_bottom_woodtypes",
+  "info": {
+    "name": "box_bottom_woodtypes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "STANDARD_GRADE": {
+      "type": "decimal"
+    }
+  }
+}

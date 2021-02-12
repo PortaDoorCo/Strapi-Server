@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliveries",
+  "info": {
+    "name": "deliveries",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "location": {
+      "type": "json"
+    },
+    "delivered": {
+      "type": "boolean"
+    },
+    "companyprofile": {
+      "model": "companyprofiles",
+      "via": "delivery"
+    },
+    "users_permissions_user": {
+      "via": "deliveries",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

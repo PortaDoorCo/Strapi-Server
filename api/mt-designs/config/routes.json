@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mt-designs",
+      "handler": "mt-designs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mt-designs/count",
+      "handler": "mt-designs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mt-designs/:id",
+      "handler": "mt-designs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mt-designs",
+      "handler": "mt-designs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mt-designs/:id",
+      "handler": "mt-designs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mt-designs/:id",
+      "handler": "mt-designs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

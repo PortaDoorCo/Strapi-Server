@@ -1,0 +1,39 @@
+{
+  "name": "portadoor-server",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Porta Door Server",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1",
+    "socket.io": "^2.3.0",
+    "socket.io-redis": "^5.4.0",
+    "strapi": "3.4.6",
+    "strapi-admin": "3.4.6",
+    "strapi-connector-mongoose": "3.4.6",
+    "strapi-plugin-content-manager": "3.4.6",
+    "strapi-plugin-content-type-builder": "3.4.6",
+    "strapi-plugin-email": "3.4.6",
+    "strapi-plugin-upload": "3.4.6",
+    "strapi-plugin-users-permissions": "3.4.6",
+    "strapi-provider-upload-cloudinary": "^3.4.6",
+    "strapi-utils": "3.4.6"
+  },
+  "author": {
+    "name": "Justin P. Romanos"
+  },
+  "strapi": {
+    "uuid": "9decc333-ce24-4dbd-94e3-1729b72b87b7"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

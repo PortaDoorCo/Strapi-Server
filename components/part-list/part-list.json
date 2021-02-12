@@ -1,0 +1,100 @@
+{
+  "collectionName": "components_part_list_part_lists",
+  "info": {
+    "name": "part_list",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "woodtype": {
+      "model": "woodtypes"
+    },
+    "cope_design": {
+      "model": "cope-designs"
+    },
+    "applied_profiles": {
+      "model": "applied-profiles"
+    },
+    "profile": {
+      "model": "profiles"
+    },
+    "edge": {
+      "model": "edges"
+    },
+    "face_frame_design": {
+      "model": "face-frame-designs"
+    },
+    "face_frame_top_rail": {
+      "model": "face-frame-top-rail"
+    },
+    "finish": {
+      "model": "finish"
+    },
+    "furniture_feet": {
+      "model": "furniture-feet"
+    },
+    "lite": {
+      "model": "lites"
+    },
+    "miter_design": {
+      "model": "miter-designs"
+    },
+    "miter_df_design": {
+      "model": "miter-df-designs"
+    },
+    "mt_design": {
+      "model": "mt-designs"
+    },
+    "mt_df_design": {
+      "model": "mt-df-designs"
+    },
+    "panel": {
+      "model": "panels"
+    },
+    "box_bottom_thickness": {
+      "model": "box-bottom-thickness"
+    },
+    "box_finish": {
+      "model": "box-finish"
+    },
+    "box_notch": {
+      "model": "box-notch"
+    },
+    "box_scoop": {
+      "model": "box-scoop"
+    },
+    "box_thickness": {
+      "model": "box-thickness"
+    },
+    "box_woodtype": {
+      "model": "box-woodtypes"
+    },
+    "dimensions": {
+      "type": "json"
+    },
+    "construction": {
+      "type": "json"
+    },
+    "orderType": {
+      "type": "json"
+    },
+    "thickness": {
+      "type": "json"
+    },
+    "addPrice": {
+      "type": "decimal"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "box_bottom_woodtype": {
+      "model": "box-bottom-woodtypes"
+    },
+    "box_assembly": {
+      "model": "box-assembly"
+    },
+    "cope_df_design": {
+      "model": "cope-df-designs"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/miter-designs",
+      "handler": "miter-designs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/miter-designs/count",
+      "handler": "miter-designs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/miter-designs/:id",
+      "handler": "miter-designs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/miter-designs",
+      "handler": "miter-designs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/miter-designs/:id",
+      "handler": "miter-designs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/miter-designs/:id",
+      "handler": "miter-designs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
