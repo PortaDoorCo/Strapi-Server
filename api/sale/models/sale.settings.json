@@ -23,9 +23,9 @@
       "via": "sale"
     },
     "user": {
+      "via": "sale",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "sale"
+      "model": "user"
     }
   }
 }

@@ -122,16 +122,20 @@
       "default": 1
     },
     "orders": {
-      "via": "user",
-      "collection": "orders"
+      "collection": "orders",
+      "via": "user"
     },
     "sale": {
-      "via": "user",
-      "model": "sale"
+      "model": "sale",
+      "via": "user"
     },
     "deliveries": {
-      "via": "user",
-      "collection": "deliveries"
+      "collection": "deliveries",
+      "via": "user"
+    },
+    "app_tour": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
