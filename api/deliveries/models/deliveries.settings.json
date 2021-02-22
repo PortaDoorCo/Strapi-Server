@@ -22,9 +22,9 @@
       "via": "delivery"
     },
     "user": {
+      "via": "deliveries",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "deliveries"
+      "model": "user"
     },
     "order": {
       "via": "delivery",
