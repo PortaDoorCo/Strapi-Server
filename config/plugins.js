@@ -8,5 +8,8 @@ module.exports = ({ env }) => ({
         api_secret: env('CLOUDINARY_SECRET')
         }
     },
+    sentry: {
+        dsn: env('SENTRY_DSN'),
+      },
     // ...
     });

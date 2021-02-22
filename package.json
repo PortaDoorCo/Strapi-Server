@@ -12,7 +12,9 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@sentry/node": "^6.2.0",
     "axios": "^0.21.1",
+    "dotenv": "^8.2.0",
     "socket.io": "^2.3.0",
     "socket.io-redis": "^5.4.0",
     "strapi": "3.5.0",
@@ -21,6 +23,7 @@
     "strapi-plugin-content-manager": "3.5.0",
     "strapi-plugin-content-type-builder": "3.5.0",
     "strapi-plugin-email": "3.5.0",
+    "strapi-plugin-sentry": "^3.5.0",
     "strapi-plugin-upload": "3.5.0",
     "strapi-plugin-users-permissions": "3.5.0",
     "strapi-provider-upload-cloudinary": "^3.4.6",
