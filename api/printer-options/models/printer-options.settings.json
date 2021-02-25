@@ -57,6 +57,10 @@
     "box_sides": {
       "type": "integer",
       "default": 1
+    },
+    "packing_slip": {
+      "type": "integer",
+      "default": 1
     }
   }
 }
