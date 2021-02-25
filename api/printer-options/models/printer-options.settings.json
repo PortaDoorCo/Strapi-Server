@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "printer_options",
+  "info": {
+    "name": "printer_options",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "assembly_list": {
+      "type": "integer",
+      "default": 1
+    },
+    "acknowledgement": {
+      "type": "integer",
+      "default": 1
+    },
+    "invoice": {
+      "type": "integer",
+      "default": 1
+    },
+    "stiles": {
+      "type": "integer",
+      "default": 1
+    },
+    "rails": {
+      "type": "integer",
+      "default": 1
+    },
+    "panels": {
+      "type": "integer",
+      "default": 1
+    },
+    "materials": {
+      "type": "integer",
+      "default": 1
+    },
+    "profiles": {
+      "type": "integer",
+      "default": 1
+    },
+    "qc": {
+      "type": "integer",
+      "default": 1
+    },
+    "box_bottoms": {
+      "type": "integer",
+      "default": 1
+    },
+    "box_sides": {
+      "type": "integer",
+      "default": 1
+    }
+  }
+}

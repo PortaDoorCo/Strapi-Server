@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/printer-options",
+      "handler": "printer-options.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/printer-options/count",
+      "handler": "printer-options.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/printer-options/:id",
+      "handler": "printer-options.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/printer-options",
+      "handler": "printer-options.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/printer-options/:id",
+      "handler": "printer-options.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/printer-options/:id",
+      "handler": "printer-options.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
