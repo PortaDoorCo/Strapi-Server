@@ -155,6 +155,10 @@ module.exports = {
       "box-scoop"
     );
 
+    const printer_options = await strapi.services.products_api.find(
+      "printer-options"
+    );
+
     const data = {
       woodtypes: woodtypes,
       applied_profiles: applied_moulds,
@@ -193,6 +197,8 @@ module.exports = {
       box_woodtypes: box_woodtypes,
       box_bottom_woodtypes: box_bottom_woodtypes,
       box_scoop: box_scoops,
+
+      printer_options
     };
 
     return data;
