@@ -100,7 +100,8 @@
     },
     "orders": {
       "via": "companyprofile",
-      "collection": "orders"
+      "collection": "orders",
+      "autoPopulate": false
     },
     "sale": {
       "via": "companyprofiles",

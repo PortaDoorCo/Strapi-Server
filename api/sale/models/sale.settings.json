@@ -16,11 +16,13 @@
     },
     "orders": {
       "via": "sale",
-      "collection": "orders"
+      "collection": "orders",
+      "autoPopulate": false
     },
     "companyprofiles": {
       "collection": "companyprofiles",
-      "via": "sale"
+      "via": "sale",
+      "autoPopulate": false
     },
     "user": {
       "via": "sale",

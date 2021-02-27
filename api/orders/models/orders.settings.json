@@ -81,7 +81,8 @@
     },
     "companyprofile": {
       "model": "companyprofiles",
-      "via": "orders"
+      "via": "orders",
+      "autoPopulate": false
     },
     "misc_items": {
       "type": "json"
