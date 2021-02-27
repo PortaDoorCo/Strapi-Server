@@ -123,7 +123,8 @@
     },
     "orders": {
       "collection": "orders",
-      "via": "user"
+      "via": "user",
+      "autoPopulate": false
     },
     "sale": {
       "model": "sale",
