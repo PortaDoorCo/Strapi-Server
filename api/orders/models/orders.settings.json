@@ -82,7 +82,7 @@
     "companyprofile": {
       "model": "companyprofiles",
       "via": "orders",
-      "autoPopulate": false
+      "autoPopulate": true
     },
     "misc_items": {
       "type": "json"
