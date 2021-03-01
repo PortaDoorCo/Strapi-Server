@@ -16,51 +16,51 @@
     },
     "assembly_list": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "acknowledgement": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "invoice": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "stiles": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "rails": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "panels": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "materials": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "profiles": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "qc": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "box_bottoms": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "box_sides": {
       "type": "integer",
-      "default": 1
+      "default": 0
     },
     "packing_slip": {
       "type": "integer",
-      "default": 1
+      "default": 0
     }
   }
 }
