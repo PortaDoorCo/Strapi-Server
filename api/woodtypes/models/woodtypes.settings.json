@@ -43,7 +43,7 @@
       "plugin": "upload",
       "required": false
     },
-    "verticalGrain": {
+    "VERTICAL_GRAIN": {
       "type": "boolean",
       "default": false
     }
