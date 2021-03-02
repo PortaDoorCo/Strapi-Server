@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "woodtypes",
   "info": {
-    "name": "woodtypes"
+    "name": "woodtypes",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -41,6 +42,10 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "verticalGrain": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
