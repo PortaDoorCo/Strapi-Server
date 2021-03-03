@@ -61,6 +61,10 @@
     "packing_slip": {
       "type": "integer",
       "default": 0
+    },
+    "box_labels": {
+      "type": "integer",
+      "default": 0
     }
   }
 }
