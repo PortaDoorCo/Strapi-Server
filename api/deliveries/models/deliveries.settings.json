@@ -18,8 +18,8 @@
       "type": "boolean"
     },
     "companyprofile": {
-      "model": "companyprofiles",
-      "via": "delivery"
+      "via": "delivery",
+      "model": "companyprofiles"
     },
     "user": {
       "via": "deliveries",

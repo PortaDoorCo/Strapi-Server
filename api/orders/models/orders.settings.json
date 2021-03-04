@@ -80,9 +80,9 @@
       "model": "user"
     },
     "companyprofile": {
-      "model": "companyprofiles",
       "via": "orders",
-      "autoPopulate": true
+      "autoPopulate": true,
+      "model": "companyprofiles"
     },
     "misc_items": {
       "type": "json"

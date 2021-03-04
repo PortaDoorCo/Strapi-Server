@@ -20,9 +20,9 @@
       "autoPopulate": false
     },
     "companyprofiles": {
-      "collection": "companyprofiles",
       "via": "sale",
-      "autoPopulate": false
+      "autoPopulate": false,
+      "collection": "companyprofiles"
     },
     "user": {
       "via": "sale",

@@ -69,10 +69,12 @@
       "type": "string"
     },
     "Discount": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "TaxRate": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "EMAIL": {
       "type": "email"
@@ -81,7 +83,8 @@
       "type": "string"
     },
     "Taxable": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "CUSTNO": {
       "type": "integer"
@@ -99,17 +102,56 @@
       "type": "json"
     },
     "orders": {
-      "via": "companyprofile",
+      "autoPopulate": false,
       "collection": "orders",
-      "autoPopulate": false
+      "via": "companyprofile"
     },
     "sale": {
-      "via": "companyprofiles",
-      "model": "sale"
+      "model": "sale",
+      "via": "companyprofiles"
     },
     "delivery": {
-      "via": "companyprofile",
-      "model": "deliveries"
+      "model": "deliveries",
+      "via": "companyprofile"
+    },
+    "Email2": {
+      "type": "email"
+    },
+    "Email3": {
+      "type": "email"
+    },
+    "Email4": {
+      "type": "email"
+    },
+    "Phone3": {
+      "type": "string"
+    },
+    "Phone4": {
+      "type": "string"
+    },
+    "Contact1": {
+      "type": "string"
+    },
+    "Contact2": {
+      "type": "string"
+    },
+    "Contact3": {
+      "type": "string"
+    },
+    "Contact4": {
+      "type": "string"
+    },
+    "Note1": {
+      "type": "string"
+    },
+    "Note2": {
+      "type": "string"
+    },
+    "Note3": {
+      "type": "string"
+    },
+    "Note4": {
+      "type": "string"
     }
   }
 }
