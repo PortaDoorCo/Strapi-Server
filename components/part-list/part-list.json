@@ -2,7 +2,8 @@
   "collectionName": "components_part_list_part_lists",
   "info": {
     "name": "part_list",
-    "icon": "address-book"
+    "icon": "address-book",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -95,6 +96,9 @@
     },
     "cope_df_design": {
       "model": "cope-df-designs"
+    },
+    "VERTICAL_GRAIN": {
+      "type": "boolean"
     }
   }
 }
