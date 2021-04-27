@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "door_piece_numbers",
+  "info": {
+    "name": "door_piece_number",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "pieces": {
+      "type": "integer"
+    },
+    "value": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "integer"
+    }
+  }
+}
