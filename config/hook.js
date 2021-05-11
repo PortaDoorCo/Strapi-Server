@@ -1,7 +1,7 @@
 module.exports = {
-    settings: {
-        'sockets': {
-            enabled: true,
-        },
-    },
+    // settings: {
+    //     'sockets': {
+    //         enabled: true,
+    //     },
+    // },
 };
