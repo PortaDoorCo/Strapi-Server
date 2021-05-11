@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/door-piece-numbers",
+      "handler": "door-piece-number.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/door-piece-numbers/count",
+      "handler": "door-piece-number.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/door-piece-numbers/:id",
+      "handler": "door-piece-number.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/door-piece-numbers",
+      "handler": "door-piece-number.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/door-piece-numbers/:id",
+      "handler": "door-piece-number.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/door-piece-numbers/:id",
+      "handler": "door-piece-number.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

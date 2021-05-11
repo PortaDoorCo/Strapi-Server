@@ -155,6 +155,11 @@ module.exports = {
       "box-scoop"
     );
 
+    const door_piece_number = await strapi.services.products_api.find(
+      { _sort: 'Item:ASC' },
+      "door-piece-number"
+    );
+
     const data = {
       woodtypes: woodtypes,
       applied_profiles: applied_moulds,
@@ -193,6 +198,8 @@ module.exports = {
       box_woodtypes: box_woodtypes,
       box_bottom_woodtypes: box_bottom_woodtypes,
       box_scoop: box_scoops,
+
+      door_piece_number: door_piece_number
     };
 
     return data;

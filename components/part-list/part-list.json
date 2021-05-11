@@ -99,6 +99,9 @@
     },
     "VERTICAL_GRAIN": {
       "type": "boolean"
+    },
+    "door_piece_number": {
+      "model": "door-piece-number"
     }
   }
 }
