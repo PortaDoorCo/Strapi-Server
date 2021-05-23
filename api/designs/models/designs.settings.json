@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "designs",
+  "info": {
+    "name": "Designs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "TOP_RAIL_ADD": {
+      "type": "float"
+    },
+    "BTM_RAIL_ADD": {
+      "type": "float"
+    },
+    "MINIMUM_STILE_WIDTH": {
+      "type": "float"
+    },
+    "PROFILE_WIDTH": {
+      "type": "float"
+    },
+    "INSET": {
+      "type": "float"
+    },
+    "DF_REDUCTION": {
+      "type": "float"
+    },
+    "CONSTRUCTION": {
+      "type": "string"
+    },
+    "ORDERTYPE": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "integer"
+    }
+  }
+}

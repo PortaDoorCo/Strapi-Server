@@ -10,9 +10,6 @@
     "woodtype": {
       "model": "woodtypes"
     },
-    "cope_design": {
-      "model": "cope-designs"
-    },
     "applied_profile": {
       "model": "applied-profiles"
     },
@@ -36,18 +33,6 @@
     },
     "lite": {
       "model": "lites"
-    },
-    "miter_design": {
-      "model": "miter-designs"
-    },
-    "miter_df_design": {
-      "model": "miter-df-designs"
-    },
-    "mt_design": {
-      "model": "mt-designs"
-    },
-    "mt_df_design": {
-      "model": "mt-df-designs"
     },
     "panel": {
       "model": "panels"
@@ -94,14 +79,14 @@
     "box_assembly": {
       "model": "box-assembly"
     },
-    "cope_df_design": {
-      "model": "cope-df-designs"
-    },
     "VERTICAL_GRAIN": {
       "type": "boolean"
     },
     "door_piece_number": {
       "model": "door-piece-number"
+    },
+    "design": {
+      "model": "designs"
     }
   }
 }
