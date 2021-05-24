@@ -20,7 +20,7 @@
     "MINIMUM_STILE_WIDTH": {
       "type": "float"
     },
-    "MID_RAIL_MINIMUMS": {
+    "PROFILE_WIDTH": {
       "type": "float"
     },
     "INSET": {
@@ -38,9 +38,10 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
-    "Price": {
+    "Extra_Charge": {
       "type": "decimal"
     }
   }
