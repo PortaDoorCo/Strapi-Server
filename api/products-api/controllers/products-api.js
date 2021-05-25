@@ -22,8 +22,13 @@ module.exports = {
     );
     
     const designs = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+      { _sort: 'Item:ASC', _limit: 200 },
       "designs"
+    );
+
+    const mouldings = await strapi.services.products_api.find(
+      { _sort: 'Item:ASC', _limit: 200 },
+      "mouldings"
     );
 
     const edge_slabs = await strapi.services.products_api.find(
@@ -125,7 +130,7 @@ module.exports = {
       face_frame_top_rail: face_frame_top_rails,
       furniture_feet: furniture_feets,
       designs,
-
+      mouldings,
       box_bottom_thickness: box_bottom_thickness,
       box_finish: box_finish,
       box_assembly: box_assembly,

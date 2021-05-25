@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mouldings",
+      "handler": "mouldings.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mouldings/count",
+      "handler": "mouldings.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mouldings/:id",
+      "handler": "mouldings.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mouldings",
+      "handler": "mouldings.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mouldings/:id",
+      "handler": "mouldings.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mouldings/:id",
+      "handler": "mouldings.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
