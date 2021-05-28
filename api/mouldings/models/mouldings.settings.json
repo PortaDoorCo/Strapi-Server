@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mouldings",
+  "info": {
+    "name": "Mouldings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "NAME": {
+      "type": "string"
+    },
+    "MOULDING_WIDTH": {
+      "type": "float"
+    },
+    "MOULDING_THICKNESS": {
+      "type": "float"
+    },
+    "Multiplier": {
+      "type": "float"
+    },
+    "Item": {
+      "type": "integer"
+    },
+    "Style": {
+      "type": "string"
+    }
+  }
+}
