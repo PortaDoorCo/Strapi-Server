@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "box_bottom_woodtypes",
   "info": {
-    "name": "box_bottom_woodtypes"
+    "name": "box_bottom_woodtypes",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,6 +16,18 @@
     },
     "STANDARD_GRADE": {
       "type": "decimal"
+    },
+    "photo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
