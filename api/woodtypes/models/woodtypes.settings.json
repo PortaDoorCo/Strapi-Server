@@ -41,11 +41,24 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "VERTICAL_GRAIN": {
       "type": "boolean",
       "default": false
+    },
+    "SELECT_GRADE": {
+      "type": "decimal"
+    },
+    "SELECT_GRADE_THICK": {
+      "type": "decimal"
+    },
+    "SIX_QUARTER": {
+      "type": "decimal"
+    },
+    "SIX_QUARTER_THICK": {
+      "type": "decimal"
     }
   }
 }
