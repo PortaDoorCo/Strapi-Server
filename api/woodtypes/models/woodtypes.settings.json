@@ -34,7 +34,8 @@
       "default": 0
     },
     "one_piece": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "photo": {
       "model": "file",
