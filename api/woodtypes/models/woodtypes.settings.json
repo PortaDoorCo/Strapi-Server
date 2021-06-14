@@ -18,16 +18,20 @@
       "type": "string"
     },
     "STANDARD_GRADE": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "STANDARD_GRADE_THICK": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "WEIGHT": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "WEIGHT_THICK": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "one_piece": {
       "type": "boolean"
@@ -49,16 +53,20 @@
       "default": false
     },
     "SELECT_GRADE": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "SELECT_GRADE_THICK": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "SIX_QUARTER": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "SIX_QUARTER_THICK": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     }
   }
 }
