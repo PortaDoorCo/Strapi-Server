@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "profiles",
+  "collectionName": "designs",
   "info": {
-    "name": "profiles",
+    "name": "Designs",
     "description": ""
   },
   "options": {
@@ -11,11 +11,20 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Item": {
-      "type": "integer"
-    },
     "NAME": {
       "type": "string"
+    },
+    "UPCHARGE": {
+      "type": "decimal"
+    },
+    "UPCHARGE_THICK": {
+      "type": "decimal"
+    },
+    "TOP_RAIL_ADD": {
+      "type": "float"
+    },
+    "BTM_RAIL_ADD": {
+      "type": "float"
     },
     "MINIMUM_STILE_WIDTH": {
       "type": "float"
@@ -26,8 +35,17 @@
     "INSET": {
       "type": "float"
     },
-    "DF_Reduction": {
+    "DF_REDUCTION": {
       "type": "float"
+    },
+    "CONSTRUCTION": {
+      "type": "string"
+    },
+    "ORDERTYPE": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "integer"
     },
     "photo": {
       "model": "file",
@@ -40,9 +58,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Extra_Charge": {
-      "type": "decimal"
     }
   }
 }

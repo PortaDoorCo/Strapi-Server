@@ -18,19 +18,24 @@
       "type": "string"
     },
     "STANDARD_GRADE": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "STANDARD_GRADE_THICK": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "WEIGHT": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "WEIGHT_THICK": {
-      "type": "float"
+      "type": "float",
+      "default": 0
     },
     "one_piece": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "photo": {
       "model": "file",
@@ -55,6 +60,21 @@
     "drawer_box": {
       "type": "boolean",
       "default": true
+    "SELECT_GRADE": {
+      "type": "decimal",
+      "default": 0
+    },
+    "SELECT_GRADE_THICK": {
+      "type": "decimal",
+      "default": 0
+    },
+    "SIX_QUARTER": {
+      "type": "decimal",
+      "default": 0
+    },
+    "SIX_QUARTER_THICK": {
+      "type": "decimal",
+      "default": 0
     }
   }
 }

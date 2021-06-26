@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "profiles",
+  "collectionName": "mouldings",
   "info": {
-    "name": "profiles",
+    "name": "Mouldings",
     "description": ""
   },
   "options": {
@@ -11,23 +11,23 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Item": {
-      "type": "integer"
-    },
     "NAME": {
       "type": "string"
     },
-    "MINIMUM_STILE_WIDTH": {
+    "MOULDING_WIDTH": {
       "type": "float"
     },
-    "PROFILE_WIDTH": {
+    "MOULDING_THICKNESS": {
       "type": "float"
     },
-    "INSET": {
+    "Multiplier": {
       "type": "float"
     },
-    "DF_Reduction": {
-      "type": "float"
+    "Item": {
+      "type": "integer"
+    },
+    "Style": {
+      "type": "string"
     },
     "photo": {
       "model": "file",
@@ -40,9 +40,6 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
-    },
-    "Extra_Charge": {
-      "type": "decimal"
     }
   }
 }
