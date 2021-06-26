@@ -53,13 +53,6 @@
       "type": "boolean",
       "default": false
     },
-    "two_piece": {
-      "type": "boolean",
-      "default": false
-    },
-    "drawer_box": {
-      "type": "boolean",
-      "default": true
     "SELECT_GRADE": {
       "type": "decimal",
       "default": 0
