@@ -41,11 +41,20 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "VERTICAL_GRAIN": {
       "type": "boolean",
       "default": false
+    },
+    "two_piece": {
+      "type": "boolean",
+      "default": false
+    },
+    "drawer_box": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
