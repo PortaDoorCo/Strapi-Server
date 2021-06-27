@@ -75,7 +75,7 @@
     },
     "drawer_box": {
       "type": "boolean",
-      "default": true
+      "default": false
     }
   }
 }
