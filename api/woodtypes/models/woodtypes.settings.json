@@ -76,6 +76,10 @@
     "drawer_box": {
       "type": "boolean",
       "default": false
+    },
+    "mouldings": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
