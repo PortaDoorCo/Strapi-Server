@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "edges",
+  "collectionName": "face_frame_finishings",
   "info": {
-    "name": "edges",
+    "name": "face_frame_finishing",
     "description": ""
   },
   "options": {
@@ -11,26 +11,11 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Item": {
-      "type": "integer"
-    },
     "NAME": {
       "type": "string"
     },
-    "UPCHARGE": {
+    "PRICE": {
       "type": "decimal"
-    },
-    "STILE_ADD": {
-      "type": "float"
-    },
-    "RAIL_ADD": {
-      "type": "float"
-    },
-    "LIP_FACTOR": {
-      "type": "float"
-    },
-    "one_piece": {
-      "type": "boolean"
     },
     "photo": {
       "model": "file",
@@ -44,9 +29,8 @@
       "required": false,
       "pluginOptions": {}
     },
-    "hinge_lip": {
-      "type": "boolean",
-      "default": false
+    "Item": {
+      "type": "integer"
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/face-frame-finishings",
+      "handler": "face-frame-finishing.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/face-frame-finishings/count",
+      "handler": "face-frame-finishing.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/face-frame-finishings/:id",
+      "handler": "face-frame-finishing.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/face-frame-finishings",
+      "handler": "face-frame-finishing.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/face-frame-finishings/:id",
+      "handler": "face-frame-finishing.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/face-frame-finishings/:id",
+      "handler": "face-frame-finishing.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

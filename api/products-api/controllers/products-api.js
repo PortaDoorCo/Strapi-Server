@@ -73,6 +73,10 @@ module.exports = {
       ctx.query,
       "face-frame-top-rail"
     );
+    const face_frame_finishing = await strapi.services.products_api.find(
+      ctx.query,
+      "face-frame-finishing"
+    );
     const furniture_feets = await strapi.services.products_api.find(
       ctx.query,
       "furniture-feet"
@@ -128,6 +132,7 @@ module.exports = {
       profiles: profiles,
       face_frame_designs: face_frame_designs,
       face_frame_top_rail: face_frame_top_rails,
+      face_frame_finishing,
       furniture_feet: furniture_feets,
       designs,
       mouldings,
@@ -139,7 +144,6 @@ module.exports = {
       box_woodtypes: box_woodtypes,
       box_bottom_woodtypes: box_bottom_woodtypes,
       box_scoop: box_scoops,
-
       door_piece_number: door_piece_number
     };
 
