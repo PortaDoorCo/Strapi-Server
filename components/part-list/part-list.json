@@ -87,6 +87,9 @@
     },
     "design": {
       "model": "designs"
+    },
+    "face_frame_finishing": {
+      "model": "face-frame-finishing"
     }
   }
 }
