@@ -16,8 +16,8 @@
     },
     "orders": {
       "via": "sale",
-      "collection": "orders",
-      "autoPopulate": false
+      "autoPopulate": false,
+      "collection": "orders"
     },
     "companyprofiles": {
       "via": "sale",
@@ -28,6 +28,9 @@
       "via": "sale",
       "plugin": "users-permissions",
       "model": "user"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

@@ -12,13 +12,13 @@ module.exports = {
   create: async (ctx) => {
     const customers = await strapi.query("companyprofiles").count();
 
-    const CUSTNO = customers + 1;
+    // const CUSTNO = customers + 1;
 
-    console.log("orders length", CUSTNO);
+    // console.log("orders length", CUSTNO);
 
     const customer = {
       ...ctx.request.body,
-      CUSTNO: CUSTNO,
+      // CUSTNO: CUSTNO,
     };
 
     const data = await strapi.services.companyprofiles.add(customer);

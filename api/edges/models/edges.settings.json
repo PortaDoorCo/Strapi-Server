@@ -47,6 +47,12 @@
     "hinge_lip": {
       "type": "boolean",
       "default": false
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

@@ -57,6 +57,9 @@
     },
     "Item": {
       "type": "integer"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

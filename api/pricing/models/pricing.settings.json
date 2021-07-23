@@ -24,6 +24,9 @@
     },
     "df_pricing": {
       "type": "text"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

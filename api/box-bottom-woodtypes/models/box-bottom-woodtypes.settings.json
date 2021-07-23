@@ -28,6 +28,15 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
+    },
+    "Item": {
+      "type": "integer"
     }
   }
 }

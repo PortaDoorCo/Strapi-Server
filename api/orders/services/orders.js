@@ -10,12 +10,12 @@ const { convertRestQueryParams, buildQuery } = require("strapi-utils");
 
 module.exports = {
   async find(params, populate) {
-    const results = await strapi.query("orders").find(params, populate);
+    const results = await strapi.query("orders").find(params, []);
     return _.first(results) || null;
   },
 
   async findAll(params, populate) {
-    const results = await strapi.query("orders").find(params, populate);
+    const results = await strapi.query("orders").find(params, []);
     return _.first(results) || null;
   },
   async add(data, { files } = {}) {

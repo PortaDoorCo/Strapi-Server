@@ -16,18 +16,18 @@ module.exports = {
       ctx.query,
       "woodtypes"
     );
-    const applied_moulds = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+    const applied_profiles = await strapi.services.products_api.find(
+      { _sort: 'id:ASC' },
       "applied-profiles"
     );
     
     const designs = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 200 },
       "designs"
     );
 
     const mouldings = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 200 },
       "mouldings"
     );
 
@@ -36,14 +36,14 @@ module.exports = {
       "edge-slabs"
     );
     const edges = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 200 },
       "edges");
-    const finishes = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+    const finish = await strapi.services.products_api.find(
+      { _sort: 'id:ASC' },
       "finish"
     );
     const lites = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+      { _sort: 'id:ASC' },
       "lites"
       );
 
@@ -52,16 +52,16 @@ module.exports = {
       "mouldings-lengths"
     );
     const moulding_material = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+      { _sort: 'id:ASC' },
       "moulding-material"
     );
 
     const panels = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 200 },
        "panels");
 
     const profiles = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 200 },
       "profiles"
     );
 
@@ -69,7 +69,7 @@ module.exports = {
       ctx.query,
       "face-frame-designs"
     );
-    const face_frame_top_rails = await strapi.services.products_api.find(
+    const face_frame_top_rail = await strapi.services.products_api.find(
       ctx.query,
       "face-frame-top-rail"
     );
@@ -77,7 +77,7 @@ module.exports = {
       ctx.query,
       "face-frame-finishing"
     );
-    const furniture_feets = await strapi.services.products_api.find(
+    const furniture_feet = await strapi.services.products_api.find(
       ctx.query,
       "furniture-feet"
     );
@@ -93,7 +93,7 @@ module.exports = {
       ctx.query,
       "box-assembly"
     );
-    const box_notches = await strapi.services.products_api.find(
+    const box_notch = await strapi.services.products_api.find(
       ctx.query,
       "box-notch"
     );
@@ -109,42 +109,42 @@ module.exports = {
       ctx.query,
       "box-bottom-woodtypes"
     );
-    const box_scoops = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+    const box_scoop = await strapi.services.products_api.find(
+      { _sort: 'id:ASC' },
       "box-scoop"
     );
 
     const door_piece_number = await strapi.services.products_api.find(
-      { _sort: 'Item:ASC' },
+      { _sort: 'id:ASC' },
       "door-piece-number"
     );
 
     const data = {
-      woodtypes: woodtypes,
-      applied_profiles: applied_moulds,
-      edge_slabs: edge_slabs,
-      edges: edges,
-      finish: finishes,
-      lites: lites,
-      mouldings_lengths: mouldings_lengths,
-      moulding_material: moulding_material,
-      panels: panels,
-      profiles: profiles,
-      face_frame_designs: face_frame_designs,
-      face_frame_top_rail: face_frame_top_rails,
+      woodtypes,
+      applied_profiles,
+      edge_slabs,
+      edges,
+      finish,
+      lites,
+      mouldings_lengths,
+      moulding_material,
+      panels,
+      profiles,
+      face_frame_designs,
+      face_frame_top_rail,
       face_frame_finishing,
-      furniture_feet: furniture_feets,
+      furniture_feet,
       designs,
       mouldings,
-      box_bottom_thickness: box_bottom_thickness,
-      box_finish: box_finish,
-      box_assembly: box_assembly,
-      box_notch: box_notches,
-      box_thickness: box_thickness,
-      box_woodtypes: box_woodtypes,
-      box_bottom_woodtypes: box_bottom_woodtypes,
-      box_scoop: box_scoops,
-      door_piece_number: door_piece_number
+      box_bottom_thickness,
+      box_finish,
+      box_assembly,
+      box_notch,
+      box_thickness,
+      box_woodtypes,
+      box_bottom_woodtypes,
+      box_scoop,
+      door_piece_number
     };
 
     return data;

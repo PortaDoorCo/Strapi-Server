@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "face_frame_designs",
   "info": {
-    "name": "face_frame_designs"
+    "name": "face_frame_designs",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -28,7 +29,14 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

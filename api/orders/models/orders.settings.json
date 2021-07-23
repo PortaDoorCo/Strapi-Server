@@ -52,7 +52,8 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "tracking": {
       "type": "json"
@@ -80,8 +81,8 @@
       "model": "user"
     },
     "companyprofile": {
-      "via": "orders",
       "autoPopulate": true,
+      "via": "orders",
       "model": "companyprofiles"
     },
     "misc_items": {
@@ -118,12 +119,14 @@
       "repeatable": true,
       "component": "part-list.part-list"
     },
-    "job_info": {
-      "type": "json"
-    },
     "delivery": {
       "model": "deliveries",
       "via": "order"
+    },
+    "job_info": {
+      "type": "component",
+      "repeatable": false,
+      "component": "job-info.job-info"
     }
   }
 }

@@ -2,13 +2,11 @@
   "collectionName": "components_job_info_job_infos",
   "info": {
     "name": "job_info",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "jobName": {
-      "type": "string"
-    },
     "poNum": {
       "type": "string",
       "default": " "
@@ -37,7 +35,10 @@
     "Address2": {
       "type": "string"
     },
-    "companyprofile": {
+    "shipping_method": {
+      "model": "shipping-methods"
+    },
+    "customer": {
       "model": "companyprofiles"
     }
   }

@@ -65,6 +65,9 @@
     "box_labels": {
       "type": "integer",
       "default": 0
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

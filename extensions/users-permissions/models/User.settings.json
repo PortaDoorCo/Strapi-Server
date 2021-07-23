@@ -122,9 +122,9 @@
       "default": 1
     },
     "orders": {
-      "collection": "orders",
       "via": "user",
-      "autoPopulate": false
+      "autoPopulate": false,
+      "collection": "orders"
     },
     "sale": {
       "model": "sale",

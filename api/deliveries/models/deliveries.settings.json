@@ -35,6 +35,9 @@
     },
     "address": {
       "type": "text"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }
