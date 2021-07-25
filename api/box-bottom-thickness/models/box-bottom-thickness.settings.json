@@ -15,6 +15,9 @@
     },
     "NAME": {
       "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

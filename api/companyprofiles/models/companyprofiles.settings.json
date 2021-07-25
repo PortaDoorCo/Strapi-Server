@@ -102,9 +102,9 @@
       "type": "json"
     },
     "orders": {
+      "via": "companyprofile",
       "autoPopulate": false,
-      "collection": "orders",
-      "via": "companyprofile"
+      "collection": "orders"
     },
     "sale": {
       "model": "sale",
@@ -151,6 +151,12 @@
       "type": "string"
     },
     "Note4": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
+    },
+    "sale_id": {
       "type": "string"
     }
   }

@@ -54,6 +54,9 @@
     },
     "horizontal_mid_rail_height": {
       "type": "text"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

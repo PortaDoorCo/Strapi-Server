@@ -31,6 +31,12 @@
     },
     "Item": {
       "type": "integer"
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

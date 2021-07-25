@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "box_thicknesses",
   "info": {
-    "name": "box_thickness"
+    "name": "box_thickness",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -37,7 +38,14 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

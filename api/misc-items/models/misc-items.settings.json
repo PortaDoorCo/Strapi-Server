@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "misc_items",
   "info": {
-    "name": "misc_items"
+    "name": "misc_items",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -25,7 +26,8 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {}
     },
     "count_items": {
       "type": "boolean"
@@ -34,6 +36,12 @@
       "collection": "category",
       "via": "misc_items",
       "dominant": true
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

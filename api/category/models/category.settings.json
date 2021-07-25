@@ -25,6 +25,9 @@
     "misc_items": {
       "via": "categories",
       "collection": "misc-items"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

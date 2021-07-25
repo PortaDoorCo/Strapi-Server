@@ -34,7 +34,7 @@ module.exports = {
 
     console.log('orders', orders)
 
-    const orderNum = orders[0].orderNum + 1
+    const orderNum = orders[0].id + 101
 
     console.log("orders length", orders);
 

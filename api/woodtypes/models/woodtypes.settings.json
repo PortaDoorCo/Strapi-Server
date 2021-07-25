@@ -80,6 +80,12 @@
     "mouldings": {
       "type": "boolean",
       "default": true
+    },
+    "photo_id": {
+      "type": "string"
+    },
+    "old_id": {
+      "type": "string"
     }
   }
 }

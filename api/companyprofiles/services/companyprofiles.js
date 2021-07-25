@@ -30,15 +30,15 @@ module.exports = {
         return entry;
     },
     async find(populate) {
-        const results = await strapi.query('companyprofiles').find(params, populate);
+        const results = await strapi.query('companyprofiles').find(params, []);
         return _.first(results) || null;
       },
 
     async findAll(populate) {
-    const results = await strapi.query('companyprofiles').find(params, populate);
+    const results = await strapi.query('companyprofiles').find(params, []);
     return _.first(results) || null;
     },
     findOne(params, populate) {
-        return strapi.query('companyprofiles').findOne(params, populate);
+        return strapi.query('companyprofiles').findOne(params, []);
       },
 };
