@@ -86,6 +86,10 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "face_frame": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
