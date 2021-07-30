@@ -82,7 +82,7 @@ module.exports = {
       "furniture-feet"
     );
     const box_bottom_thickness = await strapi.services.products_api.find(
-      ctx.query,
+      { _sort: 'id:ASC' },
       "box-bottom-thickness"
     );
     const box_finish = await strapi.services.products_api.find(
@@ -98,7 +98,7 @@ module.exports = {
       "box-notch"
     );
     const box_thickness = await strapi.services.products_api.find(
-      ctx.query,
+      { _sort: 'id:ASC' },
       "box-thickness"
     );
     const box_woodtypes = await strapi.services.products_api.find(
