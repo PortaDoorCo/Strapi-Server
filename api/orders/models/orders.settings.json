@@ -81,8 +81,8 @@
       "model": "user"
     },
     "companyprofile": {
-      "autoPopulate": true,
       "via": "orders",
+      "autoPopulate": true,
       "model": "companyprofiles"
     },
     "misc_items": {
