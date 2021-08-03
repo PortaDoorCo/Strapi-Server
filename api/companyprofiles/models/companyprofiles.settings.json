@@ -159,7 +159,7 @@
     "sale_id": {
       "type": "string"
     },
-    "attachments": {
+    "files": {
       "collection": "file",
       "via": "related",
       "allowedTypes": [
