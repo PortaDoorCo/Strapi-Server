@@ -102,8 +102,8 @@
       "type": "json"
     },
     "orders": {
-      "via": "companyprofile",
       "autoPopulate": false,
+      "via": "companyprofile",
       "collection": "orders"
     },
     "sale": {
@@ -158,6 +158,18 @@
     },
     "sale_id": {
       "type": "string"
+    },
+    "attachments": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
     }
   }
 }
