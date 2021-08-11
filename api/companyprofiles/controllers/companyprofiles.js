@@ -10,7 +10,7 @@ const axios = require("axios");
 
 module.exports = {
   create: async (ctx) => {
-    const customers = await strapi.query("companyprofiles").count();
+    // const customers = await strapi.query("companyprofiles").count();
 
     // const CUSTNO = customers + 1;
 
