@@ -10,7 +10,7 @@ const axios = require("axios");
 
 module.exports = {
   create: async (ctx) => {
-    const customers = await strapi.query("companyprofiles").count();
+    // const customers = await strapi.query("companyprofiles").count();
 
     // const CUSTNO = customers + 1;
 
@@ -59,9 +59,9 @@ module.exports = {
   async findAll(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.query("companyprofiles").find({_limit: 2000, _sort: 'CUSTNO:ASC'});
+      entities = await strapi.query("companyprofiles").find({_limit: 2500, _sort: 'CUSTNO:ASC'});
     } else {
-      entities = await strapi.query("companyprofiles").find({_limit: 2000, _sort: 'CUSTNO:ASC'});
+      entities = await strapi.query("companyprofiles").find({_limit: 2500, _sort: 'CUSTNO:ASC'});
     }
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.companyprofiles }));
