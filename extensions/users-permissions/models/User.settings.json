@@ -74,7 +74,9 @@
         "videos"
       ],
       "plugin": "upload",
-      "required": false
+      "required": false,
+      "pluginOptions": {},
+      "autoPopulate": true
     },
     "assembly_list": {
       "type": "integer",
@@ -122,8 +124,8 @@
       "default": 1
     },
     "orders": {
-      "via": "user",
       "autoPopulate": false,
+      "via": "user",
       "collection": "orders"
     },
     "sale": {
@@ -137,6 +139,11 @@
     "app_tour": {
       "type": "boolean",
       "default": true
+    },
+    "company": {
+      "model": "companyprofiles",
+      "via": "users",
+      "autoPopulate": true
     }
   }
 }
