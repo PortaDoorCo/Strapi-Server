@@ -90,6 +90,18 @@
     },
     "face_frame_finishing": {
       "model": "face-frame-finishing"
+    },
+    "leftStile": {
+      "type": "string"
+    },
+    "rightStile": {
+      "type": "string"
+    },
+    "topRail": {
+      "type": "string"
+    },
+    "bottomRail": {
+      "type": "string"
     }
   }
 }
