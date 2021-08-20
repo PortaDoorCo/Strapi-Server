@@ -49,9 +49,9 @@ module.exports = {
   async find(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.query("companyprofiles").find({_sort: 'CUSTNO:ASC', _limit: 50 });
+      entities = await strapi.query("companyprofiles").find(ctx.query);
     } else {
-      entities = await strapi.query("companyprofiles").find({_sort: 'CUSTNO:ASC', _limit: 50});
+      entities = await strapi.query("companyprofiles").find(ctx.query);
     }
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.companyprofiles }));

@@ -170,6 +170,11 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "users": {
+      "via": "company",
+      "plugin": "users-permissions",
+      "collection": "user"
     }
   }
 }
