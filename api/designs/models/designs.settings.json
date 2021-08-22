@@ -64,6 +64,9 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "DF_FULL_FRAME": {
+      "type": "float"
     }
   }
 }
