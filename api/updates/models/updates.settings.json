@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "updates",
+  "info": {
+    "name": "Updates"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "app": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    },
+    "release": {
+      "type": "string"
+    },
+    "git_log": {
+      "type": "string"
+    }
+  }
+}
