@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "updates",
+  "collectionName": "client_deployments",
   "info": {
-    "name": "Updates"
+    "name": "client-deployments"
   },
   "options": {
     "increments": true,
