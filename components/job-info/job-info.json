@@ -40,6 +40,9 @@
     },
     "customer": {
       "model": "companyprofiles"
+    },
+    "Shop_Notes": {
+      "type": "string"
     }
   }
 }
