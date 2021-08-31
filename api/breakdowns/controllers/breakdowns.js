@@ -12,9 +12,9 @@ module.exports = {
     async find(ctx) {
         let entities;
         if (ctx.query._q) {
-          entities = await strapi.query("breakdowns").find({_sort: 'Item:ASC'});
+          entities = await strapi.query("breakdowns").find({_sort: 'id:ASC'});
         } else {
-          entities = await strapi.query("breakdowns").find({_sort: 'Item:ASC'});
+          entities = await strapi.query("breakdowns").find({_sort: 'id:ASC'});
         }
     
         return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.breakdowns }));
