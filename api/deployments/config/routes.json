@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/client-deployments",
-      "handler": "client-deployments.find",
+      "path": "/deployments",
+      "handler": "deployments.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/client-deployments/count",
-      "handler": "client-deployments.count",
+      "path": "/deployments/count",
+      "handler": "deployments.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/client-deployments/:id",
-      "handler": "client-deployments.findOne",
+      "path": "/deployments/:id",
+      "handler": "deployments.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/client-deployments",
-      "handler": "client-deployments.create",
+      "path": "/deployments",
+      "handler": "deployments.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/client-deployments/:id",
-      "handler": "client-deployments.update",
+      "path": "/deployments/:id",
+      "handler": "deployments.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/client-deployments/:id",
-      "handler": "client-deployments.delete",
+      "path": "/deployments/:id",
+      "handler": "deployments.delete",
       "config": {
         "policies": []
       }
