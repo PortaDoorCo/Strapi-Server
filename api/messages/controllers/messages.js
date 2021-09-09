@@ -9,6 +9,16 @@ const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
   async create(ctx) {
-    strapi.emitToAllUsers("message", ctx.request.body);
+    let entity;
+    if (ctx.is('multipart')) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.messages.create(data, { files });
+    } else {
+      entity = await strapi.services.messages.create(ctx.request.body);
+    }
+
+    strapi.emitToAllUsers("message", entity);
+
+    return sanitizeEntity(entity, { model: strapi.models.messages });
   },
 };
