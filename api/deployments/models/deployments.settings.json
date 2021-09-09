@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deployments",
+  "info": {
+    "name": "deployments"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data": {
+      "type": "json"
+    }
+  }
+}
