@@ -17,7 +17,7 @@ module.exports = {
           entity = await strapi.services.releases.create(ctx.request.body);
         }
 
-        strapi.emitToAllUsers("new_deployment", entity);
+        strapi.emitToAllUsers("new_release", entity);
 
         return sanitizeEntity(entity, { model: strapi.models.releases });
       },
