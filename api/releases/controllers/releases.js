@@ -5,10 +5,11 @@
  * to customize this controller
  */
 
+ const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 
 module.exports = {
-    async create(ctx) {
+    async create(ctx) { 
         strapi.emitToAllUsers("new_release", ctx.request.body);
-        return
+        return {}
       },
 };

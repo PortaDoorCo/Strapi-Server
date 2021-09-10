@@ -6,7 +6,7 @@
  */
 
 module.exports = {
-    async create(data, { files } = {}) {
-      return
+    async create(data, { files } = {}) {    
+        return {}
       },
 };
