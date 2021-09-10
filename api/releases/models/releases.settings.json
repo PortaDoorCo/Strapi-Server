@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "deployments",
+  "collectionName": "releases",
   "info": {
-    "name": "deployments"
+    "name": "releases"
   },
   "options": {
     "increments": true,
