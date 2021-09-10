@@ -20,7 +20,7 @@ module.exports = async () => {
         });
         const redis = require('socket.io-redis');
         const redisAdapter = require('socket.io-redis');
-        // io.adapter(redisAdapter(process.env.REDIS_URL || process.env.REDIS_TLS_URL));
+        io.adapter(redisAdapter(process.env.REDIS_URL));
         
 
         const users = [];
