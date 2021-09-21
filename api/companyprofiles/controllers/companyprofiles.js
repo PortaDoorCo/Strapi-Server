@@ -43,7 +43,11 @@ module.exports = {
         ctx.request.body
       );
     }
-    strapi.emitToAllUsers("customer_updated", entry, ctx.request.body);
+
+    console.log({entry})
+    console.log({entity})
+
+    strapi.emitToAllUsers("customer_updated", entity);
     return sanitizeEntity(entity, { model: strapi.models.orders });
   },
   async find(ctx) {
