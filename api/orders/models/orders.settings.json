@@ -81,8 +81,8 @@
       "model": "user"
     },
     "companyprofile": {
-      "via": "orders",
       "autoPopulate": true,
+      "via": "orders",
       "model": "companyprofiles"
     },
     "misc_items": {
@@ -127,6 +127,9 @@
       "type": "component",
       "repeatable": false,
       "component": "job-info.job-info"
+    },
+    "scan_date": {
+      "type": "datetime"
     }
   }
 }
