@@ -124,8 +124,8 @@
       "default": 1
     },
     "orders": {
-      "autoPopulate": false,
       "via": "user",
+      "autoPopulate": false,
       "collection": "orders"
     },
     "sale": {
