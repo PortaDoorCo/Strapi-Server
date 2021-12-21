@@ -42,7 +42,8 @@
       "pluginOptions": {}
     },
     "Extra_Charge": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "photo_id": {
       "type": "string"
