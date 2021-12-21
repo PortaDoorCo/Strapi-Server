@@ -43,6 +43,9 @@
     },
     "Shop_Notes": {
       "type": "string"
+    },
+    "Notes": {
+      "type": "string"
     }
   }
 }
