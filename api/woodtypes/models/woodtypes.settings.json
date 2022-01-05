@@ -90,6 +90,12 @@
     "face_frame": {
       "type": "boolean",
       "default": true
+    },
+    "FRAMING_MATERIAL": {
+      "type": "string"
+    },
+    "PANEL_MATERIAL": {
+      "type": "string"
     }
   }
 }
