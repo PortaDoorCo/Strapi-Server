@@ -67,6 +67,9 @@
     },
     "DF_FULL_FRAME": {
       "type": "float"
+    },
+    "Notes": {
+      "type": "string"
     }
   }
 }
