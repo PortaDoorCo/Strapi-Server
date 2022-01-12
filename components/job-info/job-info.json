@@ -46,6 +46,10 @@
     },
     "Notes": {
       "type": "string"
+    },
+    "Shipping_Scheduled": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

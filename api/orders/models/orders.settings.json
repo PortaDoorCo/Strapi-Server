@@ -130,6 +130,10 @@
     },
     "scan_date": {
       "type": "datetime"
+    },
+    "Shipping_Scheduled": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
