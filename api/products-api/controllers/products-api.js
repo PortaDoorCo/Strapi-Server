@@ -27,7 +27,7 @@ module.exports = {
     );
 
     const mouldings = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 200 },
+      { _sort: 'id:ASC', _limit: 400 },
       "mouldings"
     );
 
