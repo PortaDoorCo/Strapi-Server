@@ -19,16 +19,20 @@ module.exports = {
   */
 
 
-  '0 * * * *': async () => {
+  '* * * * *': async () => {
     
     const x = await strapi.query("orders").find({ 
+      _sort: 'id:desc',
+      _limit: 2000,
       dueDate_lte: new Date(),
-      status_nin: ["Complete", "Shipped", "Quote"]
+      Shipping_Scheduled: true,
     })
 
     const y = await strapi.query("orders").find({ 
+      _sort: 'id:desc',
+      _limit: 2000,
       dueDate_lte: new Date(),
-      status_in: ["Complete", "Shipped", "Quote"]
+      Shipping_Scheduled: false || null,
     })
 
 
