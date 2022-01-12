@@ -1,5 +1,4 @@
-  
-'use strict';
+"use strict";
 
 /**
  * Cron config that gives you an opportunity
@@ -11,50 +10,43 @@
  * See more details here: https://strapi.io/documentation/v3.x/concepts/configurations.html#cron-tasks
  */
 
-
 module.exports = {
   /**
-  * Simple example.
-  * Every monday at 1am.
-  */
+   * Simple example.
+   * Every monday at 1am.
+   */
 
-
-  '* * * * *': async () => {
-    
-    const x = await strapi.query("orders").find({ 
-      _sort: 'id:desc',
-      _limit: 2000,
+  "0 * * * *": async () => {
+    const x = await strapi.query("orders").find({
+      _sort: "id:desc",
+      _limit: 100,
       dueDate_lte: new Date(),
       Shipping_Scheduled: true,
-    })
+    });
 
-    const y = await strapi.query("orders").find({ 
-      _sort: 'id:desc',
-      _limit: 2000,
+    const y = await strapi.query("orders").find({
+      _sort: "id:desc",
+      _limit: 100,
       dueDate_lte: new Date(),
       Shipping_Scheduled: false || null,
-    })
+    });
 
-
-    console.log("Fire!")
-    console.log(x.length)
-    console.log(y.length)
+    console.log("Fire!");
+    console.log(x.length);
+    console.log(y.length);
 
     x.forEach(async (order) => {
       await strapi.api.orders.services.orders.update(
-        {id: order.id},
-        {late: true}
+        { id: order.id },
+        { late: true }
       );
     });
 
     y.forEach(async (order) => {
       await strapi.api.orders.services.orders.update(
-        {id: order.id},
-        {late: false}
+        { id: order.id },
+        { late: false }
       );
     });
-
-  }
-
-
+  },
 };
