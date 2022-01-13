@@ -17,36 +17,48 @@ module.exports = {
    */
 
   "0 * * * *": async () => {
-    const x = await strapi.query("orders").find({
-      _sort: "id:desc",
-      _limit: 100,
-      dueDate_lte: new Date(),
-      Shipping_Scheduled: true,
-    });
+    try {
+      const x = await strapi.query("orders").find({
+        _sort: "id:desc",
+        _limit: 100,
+        dueDate_lte: new Date(),
+        Shipping_Scheduled: true,
+      });
 
-    const y = await strapi.query("orders").find({
-      _sort: "id:desc",
-      _limit: 100,
-      dueDate_lte: new Date(),
-      Shipping_Scheduled: false || null,
-    });
+      const y = await strapi.query("orders").find({
+        _sort: "id:desc",
+        _limit: 100,
+        dueDate_lte: new Date(),
+        Shipping_Scheduled: false || null,
+      });
 
-    console.log("Fire!");
-    console.log(x.length);
-    console.log(y.length);
+      console.log("Fire!");
+      console.log(x.length);
+      console.log(y.length);
 
-    x.forEach(async (order) => {
-      await strapi.api.orders.services.orders.update(
-        { id: order.id },
-        { late: true }
-      );
-    });
+      x.forEach(async (order) => {
+        try {
+          await strapi.api.orders.services.orders.update(
+            { id: order.id },
+            { late: true }
+          );
+        } catch (error) {
+          console.error(error);
+        }
+      });
 
-    y.forEach(async (order) => {
-      await strapi.api.orders.services.orders.update(
-        { id: order.id },
-        { late: false }
-      );
-    });
+      y.forEach(async (order) => {
+        try {
+          await strapi.api.orders.services.orders.update(
+            { id: order.id },
+            { late: false }
+          );
+        } catch (error) {
+          console.error(error);
+        }
+      });
+    } catch (error) {
+      console.error(error);
+    }
   },
 };
