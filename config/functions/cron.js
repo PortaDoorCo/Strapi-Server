@@ -17,7 +17,6 @@ module.exports = {
    */
 
   "0 * * * *": async () => {
-
     try {
       const x = await strapi.query("orders").find({
         _sort: "id:desc",
@@ -38,7 +37,6 @@ module.exports = {
       console.log(y.length);
 
       x.forEach(async (order) => {
-
         try {
           await strapi.api.orders.services.orders.update(
             { id: order.id },
@@ -47,12 +45,9 @@ module.exports = {
         } catch (error) {
           console.error(error);
         }
-
-
       });
 
       y.forEach(async (order) => {
-
         try {
           await strapi.api.orders.services.orders.update(
             { id: order.id },
@@ -61,13 +56,9 @@ module.exports = {
         } catch (error) {
           console.error(error);
         }
-
-
       });
     } catch (error) {
       console.error(error);
     }
-
-
   },
 };
