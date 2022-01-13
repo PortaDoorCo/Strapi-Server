@@ -21,14 +21,14 @@ module.exports = {
       const x = await strapi.query("orders").find({
         _sort: "id:desc",
         _limit: 100,
-        dueDate_lte: new Date(),
+        dueDate_lt: new Date(),
         Shipping_Scheduled: true,
       });
 
       const y = await strapi.query("orders").find({
         _sort: "id:desc",
         _limit: 100,
-        dueDate_lte: new Date(),
+        dueDate_lt: new Date(),
         Shipping_Scheduled: false || null,
       });
 
