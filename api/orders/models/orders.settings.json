@@ -143,6 +143,9 @@
     },
     "filesInfo": {
       "type": "json"
+    },
+    "DateShipped": {
+      "type": "datetime"
     }
   }
 }
