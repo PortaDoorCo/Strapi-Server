@@ -50,6 +50,9 @@
     "Shipping_Scheduled": {
       "type": "boolean",
       "default": false
+    },
+    "DateOrdered": {
+      "type": "datetime"
     }
   }
 }
