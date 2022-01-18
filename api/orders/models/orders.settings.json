@@ -81,8 +81,8 @@
       "model": "user"
     },
     "companyprofile": {
-      "via": "orders",
       "autoPopulate": true,
+      "via": "orders",
       "model": "companyprofiles"
     },
     "misc_items": {
@@ -145,6 +145,9 @@
       "type": "json"
     },
     "DateShipped": {
+      "type": "datetime"
+    },
+    "DateCompleted": {
       "type": "datetime"
     }
   }

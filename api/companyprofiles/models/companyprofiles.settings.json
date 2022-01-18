@@ -102,8 +102,8 @@
       "type": "json"
     },
     "orders": {
-      "autoPopulate": false,
       "via": "companyprofile",
+      "autoPopulate": false,
       "collection": "orders"
     },
     "sale": {
