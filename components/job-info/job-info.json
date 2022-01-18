@@ -53,6 +53,15 @@
     },
     "DateOrdered": {
       "type": "datetime"
+    },
+    "DateInvoiced": {
+      "type": "datetime"
+    },
+    "DateShipped": {
+      "type": "datetime"
+    },
+    "DateCompleted": {
+      "type": "datetime"
     }
   }
 }
