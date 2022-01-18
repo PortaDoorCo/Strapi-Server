@@ -102,8 +102,8 @@
       "type": "json"
     },
     "orders": {
-      "via": "companyprofile",
       "autoPopulate": false,
+      "via": "companyprofile",
       "collection": "orders"
     },
     "sale": {
@@ -175,6 +175,30 @@
       "via": "company",
       "plugin": "users-permissions",
       "collection": "user"
+    },
+    "Phone5": {
+      "type": "string"
+    },
+    "Phone6": {
+      "type": "string"
+    },
+    "Email5": {
+      "type": "email"
+    },
+    "Email6": {
+      "type": "email"
+    },
+    "Contact5": {
+      "type": "string"
+    },
+    "Contact6": {
+      "type": "string"
+    },
+    "Note5": {
+      "type": "string"
+    },
+    "Note6": {
+      "type": "string"
     }
   }
 }
