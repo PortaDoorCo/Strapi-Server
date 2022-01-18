@@ -141,9 +141,9 @@
       "default": true
     },
     "company": {
-      "model": "companyprofiles",
       "via": "users",
-      "autoPopulate": true
+      "autoPopulate": true,
+      "model": "companyprofiles"
     }
   }
 }
