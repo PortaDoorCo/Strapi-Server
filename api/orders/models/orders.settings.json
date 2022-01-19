@@ -149,6 +149,9 @@
     },
     "DateCompleted": {
       "type": "datetime"
+    },
+    "DateInProduction": {
+      "type": "datetime"
     }
   }
 }
