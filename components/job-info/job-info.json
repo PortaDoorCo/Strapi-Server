@@ -67,7 +67,7 @@
       "type": "datetime"
     },
     "salesRep": {
-      "type": "string"
+      "model": "sale"
     }
   }
 }
