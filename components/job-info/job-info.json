@@ -42,10 +42,10 @@
       "model": "companyprofiles"
     },
     "Shop_Notes": {
-      "type": "string"
+      "type": "text"
     },
     "Notes": {
-      "type": "string"
+      "type": "text"
     },
     "Shipping_Scheduled": {
       "type": "boolean",
