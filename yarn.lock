@@ -6825,6 +6825,11 @@ koa@2.13.1, koa@^2.13.1:
     type-is "^1.6.16"
     vary "^1.1.2"
 
+lb-ratio@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/lb-ratio/-/lb-ratio-0.4.1.tgz#79e5f7585afe68c488570d4f365cb198ad061aac"
+  integrity sha1-eeX3WFr+aMSIVw1PNlyxmK0GGqw=
+
 libbase64@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/libbase64/-/libbase64-0.1.0.tgz#62351a839563ac5ff5bd26f12f60e9830bb751e6"
@@ -7811,6 +7816,11 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
+
+numeric-quantity@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/numeric-quantity/-/numeric-quantity-1.0.2.tgz#391cb1c0a11847704b5f983e30af13f697d0b959"
+  integrity sha512-u9HQWviRs/WcYmgSWoeYqOvJ2Pk6iJwxyRE60NA1bYcoFTC5vieWTu/43b+9inUasxlNYahInuDLfWiovxPZ2g==
 
 oauth-sign@^0.9.0, oauth-sign@~0.9.0:
   version "0.9.0"
