@@ -76,4 +76,13 @@ module.exports = {
     const entity = await strapi.services.companyprofiles.findOne({ id });
     return sanitizeEntity(entity, { model: strapi.models.companyprofiles });
   },
+  async delete(ctx) {
+    const { id } = ctx.params;
+
+    const entity = await strapi.services.companyprofiles.delete({ id });
+    console.log({entity})
+    strapi.emitToAllUsers("customer_deleted", entity);
+    return sanitizeEntity(entity, { model: strapi.models.companyprofiles });
+ 
+  },
 };
