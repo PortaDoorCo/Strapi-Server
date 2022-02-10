@@ -1,4 +1,6 @@
 "use strict";
+const exportEdges = require("./exportEdges");
+const exportRazor = require("./exportRazor");
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -22,9 +24,9 @@ module.exports = {
   async findAll(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.query("orders").find({_limit: 2000, _sort: 'orderNum:DESC'});
+      entities = await strapi.query("orders").find({ _limit: 2000, _sort: 'orderNum:DESC' });
     } else {
-      entities = await strapi.query("orders").find({_limit: 2000, _sort: 'orderNum:DESC'});
+      entities = await strapi.query("orders").find({ _limit: 2000, _sort: 'orderNum:DESC' });
     }
 
     return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.orders }));
@@ -91,6 +93,21 @@ module.exports = {
   },
   update: async (ctx) => {
     let entity;
+    const item = ctx.request.body;
+    let exported = item.exported;
+    const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
+    if (!item.status.includes('Quote') &&
+      !item.status.includes('Invoiced') &&
+      !item.status.includes('Ordered') &&
+      !item.status.includes('Complete') &&
+      !item.status.includes('Shipped') &&
+      !item.exported &&
+      item.orderType === 'Door Order') {
+      // await exportEdges([item])
+      // await exportRazor([item], breakdowns)
+      exported = true;
+    }
+
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.orders.update(ctx.params, data, {
@@ -99,14 +116,49 @@ module.exports = {
     } else {
       entity = await strapi.services.orders.update(
         ctx.params,
-        ctx.request.body
+        {
+          ...ctx.request.body,
+          exported: exported
+        }
+
       );
     }
-    strapi.emitToAllUsers("order_updated", entity, ctx.request.body);
+
+
+    if (!item.status.includes('Quote') &&
+      !item.status.includes('Invoiced') &&
+      !item.status.includes('Ordered') &&
+      !item.status.includes('Complete') &&
+      !item.status.includes('Shipped') &&
+      !item.exported &&
+      item.orderType === 'Door Order') {
+      await exportEdges([item])
+      await exportRazor([item], breakdowns)
+    }
+    await strapi.emitToAllUsers("order_updated", entity, ctx.request.body);
     return sanitizeEntity(entity, { model: strapi.models.orders });
   },
   update_status: async (ctx) => {
     let entity;
+
+    const item = ctx.request.body;
+    let exported = item.exported;
+
+    console.log({ item })
+
+    const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
+    if (!item.status.includes('Quote') &&
+      !item.status.includes('Invoiced') &&
+      !item.status.includes('Ordered') &&
+      !item.status.includes('Complete') &&
+      !item.status.includes('Shipped') &&
+      !item.exported &&
+      item.orderType === 'Door Order') {
+      // await exportEdges([item])
+      // await exportRazor([item], breakdowns)
+      exported = true;
+    }
+
     if (ctx.is("multipart")) {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.orders.update(ctx.params, data, {
@@ -115,7 +167,10 @@ module.exports = {
     } else {
       entity = await strapi.services.orders.update(
         ctx.params,
-        ctx.request.body
+        {
+          ...ctx.request.body,
+          exported: exported
+        }
       );
     }
 
@@ -123,6 +178,17 @@ module.exports = {
     strapi.emitToAllUsers("status_updated", entity, ctx.request.body);
 
     // console.log(entry)
+
+    if (!item.status.includes('Quote') &&
+      !item.status.includes('Invoiced') &&
+      !item.status.includes('Ordered') &&
+      !item.status.includes('Complete') &&
+      !item.status.includes('Shipped') &&
+      !item.exported &&
+      item.orderType === 'Door Order') {
+      await exportEdges([item])
+      await exportRazor([item], breakdowns)
+    }
 
     const url = process.env.SLACK_WEBHOOK;
     const slackData = {
@@ -168,7 +234,7 @@ module.exports = {
   },
   delete: async (ctx) => {
     const entity = await strapi.services.orders.delete(ctx.params);
-    console.log('entity',entity)
+    console.log('entity', entity)
     strapi.emitToAllUsers("order_deleted", entity);
     return sanitizeEntity(entity, { model: strapi.models.orders });
   },
