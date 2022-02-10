@@ -140,11 +140,11 @@ module.exports = {
   },
   update_status: async (ctx) => {
     let entity;
-  
+
     const item = ctx.request.body;
     let exported = item.exported;
 
-    console.log({item})
+    console.log({ item })
 
     const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
     if (!item.status.includes('Quote') &&
