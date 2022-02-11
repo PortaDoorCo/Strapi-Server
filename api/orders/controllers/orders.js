@@ -94,13 +94,13 @@ module.exports = {
   update: async (ctx) => {
     let entity;
     const item = ctx.request.body;
-    let exported = item.exported;
+    let exported = item.exported ? item.exported : false;
     const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
-    if (!item.status.includes('Quote') &&
-      !item.status.includes('Invoiced') &&
-      !item.status.includes('Ordered') &&
-      !item.status.includes('Complete') &&
-      !item.status.includes('Shipped') &&
+    if (!item.status?.includes('Quote') &&
+      !item.status?.includes('Invoiced') &&
+      !item.status?.includes('Ordered') &&
+      !item.status?.includes('Complete') &&
+      !item.status?.includes('Shipped') &&
       !item.exported &&
       item.orderType === 'Door Order') {
       // await exportEdges([item])
@@ -125,11 +125,11 @@ module.exports = {
     }
 
 
-    if (!item.status.includes('Quote') &&
-      !item.status.includes('Invoiced') &&
-      !item.status.includes('Ordered') &&
-      !item.status.includes('Complete') &&
-      !item.status.includes('Shipped') &&
+    if (!item.status?.includes('Quote') &&
+      !item.status?.includes('Invoiced') &&
+      !item.status?.includes('Ordered') &&
+      !item.status?.includes('Complete') &&
+      !item.status?.includes('Shipped') &&
       !item.exported &&
       item.orderType === 'Door Order') {
       await exportEdges([item])
@@ -142,17 +142,17 @@ module.exports = {
     let entity;
 
     const item = ctx.request.body;
-    let exported = item.exported;
+    let exported = item.exported ? item.exported : false;
 
     console.log({ item })
 
     const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
-    if (!item.status.includes('Quote') &&
-      !item.status.includes('Invoiced') &&
-      !item.status.includes('Ordered') &&
-      !item.status.includes('Complete') &&
-      !item.status.includes('Shipped') &&
-      !item.exported &&
+    if (!item.status?.includes('Quote') &&
+    !item.status?.includes('Invoiced') &&
+    !item.status?.includes('Ordered') &&
+    !item.status?.includes('Complete') &&
+    !item.status?.includes('Shipped') &&
+    !item.exported &&
       item.orderType === 'Door Order') {
       // await exportEdges([item])
       // await exportRazor([item], breakdowns)
@@ -179,12 +179,12 @@ module.exports = {
 
     // console.log(entry)
 
-    if (!item.status.includes('Quote') &&
-      !item.status.includes('Invoiced') &&
-      !item.status.includes('Ordered') &&
-      !item.status.includes('Complete') &&
-      !item.status.includes('Shipped') &&
-      !item.exported &&
+    if (!item.status?.includes('Quote') &&
+    !item.status?.includes('Invoiced') &&
+    !item.status?.includes('Ordered') &&
+    !item.status?.includes('Complete') &&
+    !item.status?.includes('Shipped') &&
+    !item.exported &&
       item.orderType === 'Door Order') {
       await exportEdges([item])
       await exportRazor([item], breakdowns)
