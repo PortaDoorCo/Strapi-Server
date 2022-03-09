@@ -70,6 +70,9 @@
     },
     "Notes": {
       "type": "string"
+    },
+    "square": {
+      "type": "boolean"
     }
   }
 }
