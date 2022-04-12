@@ -9,25 +9,24 @@ const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async find(ctx) {
-
-    console.log('query',ctx.query)
+    console.log("query", ctx.query);
 
     const woodtypes = await strapi.services.products_api.find(
       ctx.query,
       "woodtypes"
     );
     const applied_profiles = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "applied-profiles"
     );
-    
+
     const designs = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 200 },
+      { _sort: "id:ASC", _limit: 200 },
       "designs"
     );
 
     const mouldings = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 400 },
+      { _sort: "id:ASC", _limit: 400 },
       "mouldings"
     );
 
@@ -36,32 +35,34 @@ module.exports = {
       "edge-slabs"
     );
     const edges = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 200 },
-      "edges");
+      { _sort: "id:ASC", _limit: 200 },
+      "edges"
+    );
     const finish = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "finish"
     );
     const lites = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "lites"
-      );
+    );
 
     const mouldings_lengths = await strapi.services.products_api.find(
       ctx.query,
       "mouldings-lengths"
     );
     const moulding_material = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "moulding-material"
     );
 
     const panels = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 200 },
-       "panels");
+      { _sort: "id:ASC", _limit: 200 },
+      "panels"
+    );
 
     const profiles = await strapi.services.products_api.find(
-      { _sort: 'id:ASC', _limit: 200 },
+      { _sort: "id:ASC", _limit: 200 },
       "profiles"
     );
 
@@ -82,7 +83,7 @@ module.exports = {
       "furniture-feet"
     );
     const box_bottom_thickness = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "box-bottom-thickness"
     );
     const box_finish = await strapi.services.products_api.find(
@@ -90,7 +91,7 @@ module.exports = {
       "box-finish"
     );
     const box_assembly = await strapi.services.products_api.find(
-      ctx.query,
+      { _sort: "id:ASC" },
       "box-assembly"
     );
     const box_notch = await strapi.services.products_api.find(
@@ -98,7 +99,7 @@ module.exports = {
       "box-notch"
     );
     const box_thickness = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "box-thickness"
     );
     const box_woodtypes = await strapi.services.products_api.find(
@@ -110,12 +111,12 @@ module.exports = {
       "box-bottom-woodtypes"
     );
     const box_scoop = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "box-scoop"
     );
 
     const door_piece_number = await strapi.services.products_api.find(
-      { _sort: 'id:ASC' },
+      { _sort: "id:ASC" },
       "door-piece-number"
     );
 
@@ -144,7 +145,7 @@ module.exports = {
       box_woodtypes,
       box_bottom_woodtypes,
       box_scoop,
-      door_piece_number
+      door_piece_number,
     };
 
     return data;
@@ -184,10 +185,13 @@ module.exports = {
 
   async getSingleProduct(ctx) {
     const { id, product } = ctx.params;
-    console.log('product', product)
-    console.log('id', id)
-    const entity = await strapi.services.products_api.getSingleProduct({ id, product });
-    return entity
+    console.log("product", product);
+    console.log("id", id);
+    const entity = await strapi.services.products_api.getSingleProduct({
+      id,
+      product,
+    });
+    return entity;
   },
 
   async addProduct(ctx) {
