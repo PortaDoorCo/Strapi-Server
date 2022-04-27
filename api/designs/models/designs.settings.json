@@ -73,6 +73,9 @@
     },
     "square": {
       "type": "boolean"
+    },
+    "Mid_Rail_Width": {
+      "type": "float"
     }
   }
 }
