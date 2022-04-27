@@ -50,6 +50,9 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "Mid_Rail_Width": {
+      "type": "float"
     }
   }
 }
