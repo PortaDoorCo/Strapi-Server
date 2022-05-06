@@ -50,6 +50,9 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "CBD": {
+      "type": "boolean"
     }
   }
 }
