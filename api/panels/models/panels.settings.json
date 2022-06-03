@@ -53,6 +53,9 @@
     },
     "CBD": {
       "type": "boolean"
+    },
+    "panel_wrap": {
+      "type": "boolean"
     }
   }
 }

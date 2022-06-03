@@ -102,6 +102,12 @@
     },
     "bottomRail": {
       "type": "string"
+    },
+    "wrap_width": {
+      "type": "string"
+    },
+    "face_width": {
+      "type": "string"
     }
   }
 }
