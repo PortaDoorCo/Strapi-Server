@@ -53,6 +53,9 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "special_slab_edge": {
+      "type": "boolean"
     }
   }
 }

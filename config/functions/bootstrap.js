@@ -29,8 +29,13 @@ module.exports = async () => {
 
     const getDrivers = () => {
       let clients = io.sockets.clients().connected;
+      console.log({ client: clients?.client });
       let sockets = Object.values(clients);
-      let drivers = sockets.map((s) => s.driver);
+      let drivers = sockets.map((s) => {
+        console.log({ s });
+        return s.driver;
+      });
+      console.log({ drivers });
       return drivers.filter((i) => i);
     };
 
@@ -39,6 +44,7 @@ module.exports = async () => {
     };
 
     io.on("connection", (socket) => {
+      console.log({ socket });
       console.log(socket.id);
       socket.user_id = Math.random() * 100000000000000; // not so secure
       users.push(socket); // save the socket to use it later
@@ -46,15 +52,16 @@ module.exports = async () => {
       socket.on("position", (position) => {
         console.log("position", position);
         socket.driver = position;
+        console.log("hiiii");
         emitDrivers();
       });
 
       socket.on("disconnect", () => {
-        emitDrivers();
         users.forEach((user, i) => {
           // delete saved user when they disconnect
           if (user.user_id === socket.user_id) users.splice(i, 1);
         });
+        emitDrivers();
       });
     });
     strapi.io = io;
