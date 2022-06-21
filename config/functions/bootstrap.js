@@ -29,13 +29,13 @@ module.exports = async () => {
 
     const getDrivers = () => {
       let clients = io.sockets.clients().connected;
-      console.log({ client: clients?.client });
+      // console.log({ client: clients?.client });
       let sockets = Object.values(clients);
       let drivers = sockets.map((s) => {
-        console.log({ s });
+        // console.log({ s });
         return s.driver;
       });
-      console.log({ drivers });
+      // console.log({ drivers });
       return drivers.filter((i) => i);
     };
 
@@ -44,13 +44,13 @@ module.exports = async () => {
     };
 
     io.on("connection", (socket) => {
-      console.log({ socket });
-      console.log(socket.id);
+      // console.log({ socket });
+      // console.log(socket.id);
       socket.user_id = Math.random() * 100000000000000; // not so secure
       users.push(socket); // save the socket to use it later
 
       socket.on("position", (position) => {
-        console.log("position", position);
+        // console.log("position", position);
         socket.driver = position;
         console.log("hiiii");
         emitDrivers();
