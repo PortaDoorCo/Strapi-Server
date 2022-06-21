@@ -57,11 +57,11 @@ module.exports = async () => {
       });
 
       socket.on("disconnect", () => {
+        emitDrivers();
         users.forEach((user, i) => {
           // delete saved user when they disconnect
           if (user.user_id === socket.user_id) users.splice(i, 1);
         });
-        emitDrivers();
       });
     });
     strapi.io = io;
