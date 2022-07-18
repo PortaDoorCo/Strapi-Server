@@ -76,6 +76,9 @@
     },
     "Mid_Rail_Width": {
       "type": "float"
+    },
+    "Min_Mid_Rail_Width": {
+      "type": "float"
     }
   }
 }
