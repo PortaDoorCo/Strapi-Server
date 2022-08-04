@@ -19,24 +19,34 @@ module.exports = {
       entities = await strapi.query("orders").find(ctx.query);
     }
 
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.orders }));
+    return entities.map((entity) =>
+      sanitizeEntity(entity, { model: strapi.models.orders })
+    );
   },
   async findAll(ctx) {
     let entities;
     if (ctx.query._q) {
-      entities = await strapi.query("orders").find({ _limit: 2000, _sort: 'orderNum:DESC' });
+      entities = await strapi
+        .query("orders")
+        .find({ _limit: 10000, _sort: "orderNum:DESC" });
     } else {
-      entities = await strapi.query("orders").find({ _limit: 2000, _sort: 'orderNum:DESC' });
+      entities = await strapi
+        .query("orders")
+        .find({ _limit: 10000, _sort: "orderNum:DESC" });
     }
 
-    return entities.map(entity => sanitizeEntity(entity, { model: strapi.models.orders }));
+    return entities.map((entity) =>
+      sanitizeEntity(entity, { model: strapi.models.orders })
+    );
   },
   create: async (ctx) => {
-    const orders = await strapi.query('orders').find({ _limit: 1, _sort: 'orderNum:desc' });
+    const orders = await strapi
+      .query("orders")
+      .find({ _limit: 1, _sort: "orderNum:desc" });
 
-    console.log('orders', orders)
+    console.log("orders", orders);
 
-    const orderNum = orders[0].id + 101
+    const orderNum = orders[0].id + 101;
 
     console.log("orders length", orders);
 
@@ -95,14 +105,18 @@ module.exports = {
     let entity;
     const item = ctx.request.body;
     let exported = item.exported ? item.exported : false;
-    const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
-    if (!item.status?.includes('Quote') &&
-      !item.status?.includes('Invoiced') &&
-      !item.status?.includes('Ordered') &&
-      !item.status?.includes('Complete') &&
-      !item.status?.includes('Shipped') &&
+    const breakdowns = await strapi
+      .query("breakdowns")
+      .find({ _sort: "id:ASC" });
+    if (
+      !item.status?.includes("Quote") &&
+      !item.status?.includes("Invoiced") &&
+      !item.status?.includes("Ordered") &&
+      !item.status?.includes("Complete") &&
+      !item.status?.includes("Shipped") &&
       !item.exported &&
-      item.orderType === 'Door Order') {
+      item.orderType === "Door Order"
+    ) {
       // await exportEdges([item])
       // await exportRazor([item], breakdowns)
       exported = true;
@@ -114,26 +128,23 @@ module.exports = {
         files,
       });
     } else {
-      entity = await strapi.services.orders.update(
-        ctx.params,
-        {
-          ...ctx.request.body,
-          exported: exported
-        }
-
-      );
+      entity = await strapi.services.orders.update(ctx.params, {
+        ...ctx.request.body,
+        exported: exported,
+      });
     }
 
-
-    if (!item.status?.includes('Quote') &&
-      !item.status?.includes('Invoiced') &&
-      !item.status?.includes('Ordered') &&
-      !item.status?.includes('Complete') &&
-      !item.status?.includes('Shipped') &&
+    if (
+      !item.status?.includes("Quote") &&
+      !item.status?.includes("Invoiced") &&
+      !item.status?.includes("Ordered") &&
+      !item.status?.includes("Complete") &&
+      !item.status?.includes("Shipped") &&
       !item.exported &&
-      item.orderType === 'Door Order') {
-      await exportEdges([item])
-      await exportRazor([item], breakdowns)
+      item.orderType === "Door Order"
+    ) {
+      await exportEdges([item]);
+      await exportRazor([item], breakdowns);
     }
     await strapi.emitToAllUsers("order_updated", entity, ctx.request.body);
     return sanitizeEntity(entity, { model: strapi.models.orders });
@@ -144,16 +155,20 @@ module.exports = {
     const item = ctx.request.body;
     let exported = item.exported ? item.exported : false;
 
-    console.log({ item })
+    console.log({ item });
 
-    const breakdowns = await strapi.query("breakdowns").find({ _sort: 'id:ASC' });
-    if (!item.status?.includes('Quote') &&
-    !item.status?.includes('Invoiced') &&
-    !item.status?.includes('Ordered') &&
-    !item.status?.includes('Complete') &&
-    !item.status?.includes('Shipped') &&
-    !item.exported &&
-      item.orderType === 'Door Order') {
+    const breakdowns = await strapi
+      .query("breakdowns")
+      .find({ _sort: "id:ASC" });
+    if (
+      !item.status?.includes("Quote") &&
+      !item.status?.includes("Invoiced") &&
+      !item.status?.includes("Ordered") &&
+      !item.status?.includes("Complete") &&
+      !item.status?.includes("Shipped") &&
+      !item.exported &&
+      item.orderType === "Door Order"
+    ) {
       // await exportEdges([item])
       // await exportRazor([item], breakdowns)
       exported = true;
@@ -165,13 +180,10 @@ module.exports = {
         files,
       });
     } else {
-      entity = await strapi.services.orders.update(
-        ctx.params,
-        {
-          ...ctx.request.body,
-          exported: exported
-        }
-      );
+      entity = await strapi.services.orders.update(ctx.params, {
+        ...ctx.request.body,
+        exported: exported,
+      });
     }
 
     const body = ctx.request.body;
@@ -179,15 +191,17 @@ module.exports = {
 
     // console.log(entry)
 
-    if (!item.status?.includes('Quote') &&
-    !item.status?.includes('Invoiced') &&
-    !item.status?.includes('Ordered') &&
-    !item.status?.includes('Complete') &&
-    !item.status?.includes('Shipped') &&
-    !item.exported &&
-      item.orderType === 'Door Order') {
-      await exportEdges([item])
-      await exportRazor([item], breakdowns)
+    if (
+      !item.status?.includes("Quote") &&
+      !item.status?.includes("Invoiced") &&
+      !item.status?.includes("Ordered") &&
+      !item.status?.includes("Complete") &&
+      !item.status?.includes("Shipped") &&
+      !item.exported &&
+      item.orderType === "Door Order"
+    ) {
+      await exportEdges([item]);
+      await exportRazor([item], breakdowns);
     }
 
     const url = process.env.SLACK_WEBHOOK;
@@ -234,7 +248,7 @@ module.exports = {
   },
   delete: async (ctx) => {
     const entity = await strapi.services.orders.delete(ctx.params);
-    console.log('entity', entity)
+    console.log("entity", entity);
     strapi.emitToAllUsers("order_deleted", entity);
     return sanitizeEntity(entity, { model: strapi.models.orders });
   },
