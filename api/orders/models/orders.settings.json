@@ -81,8 +81,8 @@
       "model": "user"
     },
     "companyprofile": {
-      "via": "orders",
       "autoPopulate": true,
+      "via": "orders",
       "model": "companyprofiles"
     },
     "misc_items": {
@@ -159,6 +159,9 @@
     },
     "poNum": {
       "type": "string"
+    },
+    "flat_stock": {
+      "type": "json"
     }
   }
 }
