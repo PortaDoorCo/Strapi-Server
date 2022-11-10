@@ -162,6 +162,10 @@
     },
     "flat_stock": {
       "type": "json"
+    },
+    "oldPricing": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
