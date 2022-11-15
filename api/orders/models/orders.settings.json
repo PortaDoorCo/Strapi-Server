@@ -166,6 +166,9 @@
     "oldPricing": {
       "type": "boolean",
       "default": false
+    },
+    "cash_total": {
+      "type": "decimal"
     }
   }
 }
