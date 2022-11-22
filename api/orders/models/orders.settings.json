@@ -167,7 +167,7 @@
       "type": "boolean",
       "default": false
     },
-    "cash_total": {
+    "ccTotal": {
       "type": "decimal"
     }
   }
