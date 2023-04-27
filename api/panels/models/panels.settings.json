@@ -56,6 +56,10 @@
     },
     "panel_wrap": {
       "type": "boolean"
+    },
+    "glass": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
