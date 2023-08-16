@@ -108,6 +108,9 @@
     },
     "face_width": {
       "type": "string"
+    },
+    "job_notes": {
+      "type": "text"
     }
   }
 }
