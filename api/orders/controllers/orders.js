@@ -1,6 +1,7 @@
 "use strict";
 const exportEdges = require("./exportEdges");
 const exportRazor = require("./exportRazor");
+const _ = require("lodash");
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -257,5 +258,45 @@ module.exports = {
 
     const entity = await strapi.services.orders.findOne({ id });
     return sanitizeEntity(entity, { model: strapi.models.orders });
+  },
+  searchItems: async (ctx) => {
+    console.log({ ctx: ctx.query });
+
+    let searchTerm = ctx.query.searchTerm;
+
+    // Convert searchTerm to snake case using Lodash
+    searchTerm = _.snakeCase(searchTerm);
+
+    console.log({ searchTerm });
+
+    try {
+      const entities = await strapi
+        .query("orders")
+        .find({ _limit: 1000, _sort: "orderNum:DESC" });
+
+      console.log({ length: entities.length });
+
+      const filteredOrders = entities?.filter((order) => {
+        // Assuming 'part_list' is an array in your order entity
+        return order?.part_list?.some((part) => {
+          // Convert part names to snake case and check if they include the search term
+          return (
+            _.snakeCase(part?.design?.NAME).includes(searchTerm) ||
+            _.snakeCase(part?.panel?.NAME).includes(searchTerm) ||
+            _.snakeCase(part?.profile?.NAME).includes(searchTerm) ||
+            _.snakeCase(part?.edge?.NAME).includes(searchTerm) ||
+            _.snakeCase(part?.applied_profile?.NAME).includes(searchTerm) ||
+            _.snakeCase(part?.woodtype?.NAME).includes(searchTerm)
+          );
+          // Add more fields as needed
+        });
+      });
+
+      console.log({ filteredOrders: filteredOrders.length });
+
+      return filteredOrders;
+    } catch (err) {
+      ctx.throw(500, err);
+    }
   },
 };
