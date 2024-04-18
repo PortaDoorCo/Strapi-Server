@@ -68,11 +68,11 @@ module.exports = {
     if (ctx.query._q) {
       entities = await strapi
         .query("companyprofiles")
-        .find({ _limit: 2500, _sort: "CUSTNO:ASC" });
+        .find({ _limit: 3000, _sort: "CUSTNO:ASC" });
     } else {
       entities = await strapi
         .query("companyprofiles")
-        .find({ _limit: 2500, _sort: "CUSTNO:ASC" });
+        .find({ _limit: 3000, _sort: "CUSTNO:ASC" });
     }
 
     return entities.map((entity) =>
