@@ -16,7 +16,7 @@ module.exports = async () => {
     const pubClient = createClient({
       url: process.env.REDIS_URL,
       socket: {
-        tls: true,
+        tls: redis_url.match(/rediss:/) != null,
         rejectUnauthorized: false,
       },
     });
