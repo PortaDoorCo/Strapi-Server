@@ -17,8 +17,9 @@ module.exports = async () => {
     const pubClient = createClient({
       url: process.env.REDIS_URL,
       socket: {
-        tls: true,
-        rejectUnauthorized: false,
+        tls: {
+          rejectUnauthorized: false,
+        },
       },
     });
 
