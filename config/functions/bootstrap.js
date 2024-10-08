@@ -12,6 +12,7 @@ module.exports = async () => {
     const { createClient } = require("redis");
     const redisAdapter = require("socket.io-redis");
 
+    const redis_url = process.env.REDIS_URL;
     // Create Redis clients with TLS options
     const pubClient = createClient({
       url: process.env.REDIS_URL,
