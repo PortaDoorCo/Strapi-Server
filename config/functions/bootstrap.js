@@ -13,11 +13,14 @@
 module.exports = async () => {
   process.nextTick(() => {
     (async () => {
-      const io = require("socket.io")(strapi.server, {
+      const { Server } = require("socket.io");
+      const io = new Server(strapi.server, {
         cors: {
           origin: "*",
           methods: ["GET", "POST"],
         },
+        transports: ["websocket", "polling"],
+        allowEIO3: true, // Enable compatibility with Socket.IO v2 clients
       });
 
       const { createClient } = require("redis");
@@ -68,6 +71,7 @@ module.exports = async () => {
       };
 
       io.on("connection", (socket) => {
+        console.log("New client connected");
         socket.user_id = Math.random() * 100000000000000; // Not secure, consider using a proper ID generator
         users.push(socket); // Save the socket for later use
 
