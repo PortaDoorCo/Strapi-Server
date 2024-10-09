@@ -42,6 +42,9 @@
   "resolutions": {
     "socket.io-adapter": "2.5.4"
   },
+  "peerDependencies": {
+    "socket.io-adapter": "^2.5.4"
+  },
   "author": {
     "name": "Justin P. Romanos"
   },
