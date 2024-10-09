@@ -1,6 +1,15 @@
 "use strict";
 
 module.exports = async () => {
+  // Define emitToAllUsers function outside of process.nextTick
+  strapi.emitToAllUsers = (status, order, updatedStatus) => {
+    if (strapi.io) {
+      strapi.io.emit(status, order, updatedStatus);
+    } else {
+      console.warn("Socket.io not initialized yet. Unable to emit.");
+    }
+  };
+
   process.nextTick(async () => {
     const { Server } = require("socket.io");
     const io = new Server(strapi.server, {
@@ -72,8 +81,7 @@ module.exports = async () => {
     });
 
     strapi.io = io;
-    // Send to all users connected
-    strapi.emitToAllUsers = (status, order, updatedStatus) =>
-      io.emit(status, order, updatedStatus);
+    // Remove the following line as we've already defined emitToAllUsers
+    // strapi.emitToAllUsers = (status, order, updatedStatus) => io.emit(status, order, updatedStatus);
   });
 };
