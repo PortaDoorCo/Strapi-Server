@@ -19,7 +19,7 @@ module.exports = async () => {
           origin: "*",
           methods: ["GET", "POST"],
         },
-        transports: ["websocket"],
+        transports: ["websocket", "polling"],
         allowEIO3: true, // Enable compatibility with Socket.IO v2 clients
       });
 
