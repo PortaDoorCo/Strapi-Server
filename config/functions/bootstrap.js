@@ -10,12 +10,12 @@ module.exports = async () => {
     });
 
     const { createClient } = require("redis");
-    const { createAdapter } = require("@socket.io/redis-adapter");
+    const redisAdapter = require("socket.io-redis");
 
     const redis_url = process.env.REDIS_URL;
-
+    // Create Redis clients with TLS options
     const pubClient = createClient({
-      url: redis_url,
+      url: process.env.REDIS_URL,
       socket: {
         tls: {
           rejectUnauthorized: false,
@@ -25,13 +25,16 @@ module.exports = async () => {
 
     const subClient = pubClient.duplicate();
 
+    // Handle errors
     pubClient.on("error", (err) => console.error("Redis Client Error", err));
     subClient.on("error", (err) => console.error("Redis Client Error", err));
 
+    // Connect the clients
     await pubClient.connect();
     await subClient.connect();
 
-    io.adapter(createAdapter(pubClient, subClient));
+    // Use the clients in the adapter
+    io.adapter(redisAdapter({ pubClient, subClient }));
 
     const users = [];
     let drivers = [];
@@ -51,7 +54,7 @@ module.exports = async () => {
 
     io.on("connection", (socket) => {
       socket.user_id = Math.random() * 100000000000000; // not so secure
-      users.push(socket);
+      users.push(socket); // save the socket to use it later
 
       socket.on("position", (position) => {
         socket.driver = position;
@@ -67,6 +70,7 @@ module.exports = async () => {
     });
 
     strapi.io = io;
+    // Send to all users connected
     strapi.emitToAllUsers = (status, order, updatedStatus) =>
       io.emit(status, order, updatedStatus);
   });
