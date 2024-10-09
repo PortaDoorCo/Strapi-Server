@@ -2,7 +2,8 @@
 
 module.exports = async () => {
   process.nextTick(async () => {
-    const io = require("socket.io")(strapi.server, {
+    const { Server } = require("socket.io");
+    const io = new Server(strapi.server, {
       cors: {
         origin: "*",
         methods: ["GET", "POST"],
@@ -16,7 +17,7 @@ module.exports = async () => {
     const pubClient = createClient({
       url: process.env.REDIS_URL,
       socket: {
-        tls: redis_url.match(/rediss:/) != null,
+        tls: process.env.REDIS_URL.startsWith("rediss:"),
         rejectUnauthorized: false,
       },
     });
@@ -24,12 +25,15 @@ module.exports = async () => {
     const subClient = pubClient.duplicate();
 
     // Handle errors
-    pubClient.on("error", (err) => console.error("Redis Client Error", err));
-    subClient.on("error", (err) => console.error("Redis Client Error", err));
+    pubClient.on("error", (err) =>
+      console.error("Redis Pub Client Error", err)
+    );
+    subClient.on("error", (err) =>
+      console.error("Redis Sub Client Error", err)
+    );
 
     // Connect the clients
-    await pubClient.connect();
-    await subClient.connect();
+    await Promise.all([pubClient.connect(), subClient.connect()]);
 
     // Use the clients in the adapter
     io.adapter(createAdapter(pubClient, subClient));
