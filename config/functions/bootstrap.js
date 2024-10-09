@@ -10,13 +10,13 @@ module.exports = async () => {
     });
 
     const { createClient } = require("redis");
-    const redisAdapter = require("socket.io-redis");
+    const { createAdapter } = require("@socket.io/redis-adapter");
 
-    const redis_url = process.env.REDIS_URL;
     // Create Redis clients with TLS options
     const pubClient = createClient({
       url: process.env.REDIS_URL,
-      tls: {
+      socket: {
+        tls: redis_url.match(/rediss:/) != null,
         rejectUnauthorized: false,
       },
     });
@@ -32,7 +32,7 @@ module.exports = async () => {
     await subClient.connect();
 
     // Use the clients in the adapter
-    io.adapter(redisAdapter({ pubClient, subClient }));
+    io.adapter(createAdapter(pubClient, subClient));
 
     const users = [];
     let drivers = [];
