@@ -16,10 +16,8 @@ module.exports = async () => {
     // Create Redis clients with TLS options
     const pubClient = createClient({
       url: process.env.REDIS_URL,
-      socket: {
-        tls: {
-          rejectUnauthorized: false,
-        },
+      tls: {
+        rejectUnauthorized: false,
       },
     });
 
