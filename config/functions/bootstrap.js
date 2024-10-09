@@ -2,13 +2,13 @@
 
 module.exports = async () => {
   // Define emitToAllUsers function outside of process.nextTick
-  strapi.emitToAllUsers = (status, order, updatedStatus) => {
-    if (strapi.io) {
-      strapi.io.emit(status, order, updatedStatus);
-    } else {
-      console.warn("Socket.io not initialized yet. Unable to emit.");
-    }
-  };
+  // strapi.emitToAllUsers = (status, order, updatedStatus) => {
+  //   if (strapi.io) {
+  //     strapi.io.emit(status, order, updatedStatus);
+  //   } else {
+  //     console.warn("Socket.io not initialized yet. Unable to emit.");
+  //   }
+  // };
 
   process.nextTick(async () => {
     const { Server } = require("socket.io");
@@ -26,7 +26,7 @@ module.exports = async () => {
     const pubClient = createClient({
       url: process.env.REDIS_URL,
       socket: {
-        tls: process.env.REDIS_URL.startsWith("rediss:"),
+        tls: redis_url.match(/rediss:/) != null,
         rejectUnauthorized: false,
       },
     });
@@ -82,6 +82,7 @@ module.exports = async () => {
 
     strapi.io = io;
     // Remove the following line as we've already defined emitToAllUsers
-    // strapi.emitToAllUsers = (status, order, updatedStatus) => io.emit(status, order, updatedStatus);
+    strapi.emitToAllUsers = (status, order, updatedStatus) =>
+      io.emit(status, order, updatedStatus);
   });
 };
