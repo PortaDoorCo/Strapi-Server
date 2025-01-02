@@ -32,9 +32,9 @@ module.exports = ({ env }) => ({
         username: env("DATABASE_USERNAME"),
         password: env("DATABASE_PASSWORD"),
         schema: env("DATABASE_SCHEMA", "public"),
-        ssl: {
-          rejectUnauthorized: false,
-        },
+        // ssl: {
+        //   rejectUnauthorized: false,
+        // },
       },
       options: {},
     },

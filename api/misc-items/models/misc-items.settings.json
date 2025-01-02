@@ -42,6 +42,9 @@
     },
     "old_id": {
       "type": "string"
+    },
+    "taxable": {
+      "type": "boolean"
     }
   }
 }
