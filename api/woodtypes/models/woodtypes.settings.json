@@ -96,6 +96,12 @@
     },
     "PANEL_MATERIAL": {
       "type": "string"
+    },
+    "EIGHT_QUARTER": {
+      "type": "decimal"
+    },
+    "EIGHT_QUARTER_THICK": {
+      "type": "decimal"
     }
   }
 }
