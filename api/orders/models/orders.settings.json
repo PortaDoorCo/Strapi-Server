@@ -169,6 +169,9 @@
     },
     "cash_total": {
       "type": "decimal"
+    },
+    "NonCashPayment": {
+      "type": "boolean"
     }
   }
 }
