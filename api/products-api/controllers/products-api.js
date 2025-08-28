@@ -57,7 +57,7 @@ module.exports = {
     );
 
     const panels = await strapi.services.products_api.find(
-      { _sort: "id:ASC", _limit: 200 },
+      { _sort: "id:ASC", _limit: 400 },
       "panels"
     );
 
